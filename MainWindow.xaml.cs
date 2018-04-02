@@ -24,5 +24,55 @@ namespace PZ_generatory
         {
             InitializeComponent();
         }
+
+        private void ButtonLogout_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonCloseMenu.Visibility = Visibility.Visible;
+            ButtonOpenMenu.Visibility = Visibility.Collapsed;
+        }
+
+        private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonCloseMenu.Visibility = Visibility.Collapsed;
+            ButtonOpenMenu.Visibility = Visibility.Visible;
+        }
+
+        private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            UserControl usc = null;
+            GridMain.Children.Clear();
+
+            switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
+            {
+                case "ItemStronaGłówna":
+                    usc = new UserControlStronaGłówna();
+                    GridMain.Children.Add(usc);
+                    break;
+                case "ItemGeneratory":
+                    usc = new UserControlGeneratory();
+                    GridMain.Children.Add(usc);
+                    break;
+                case "ItemSzyfrator":
+                    usc = new UserControlSzyfrator();
+                    GridMain.Children.Add(usc);
+                    break;
+                case "ItemTesty":
+                    usc = new UserControlTesty();
+                    GridMain.Children.Add(usc);
+                    break;
+                case "ItemQuizTematyczny":
+                    usc = new UserControlQuizTematyczny();
+                    GridMain.Children.Add(usc);
+                    break;
+                default:
+                    break;
+            }
+        }
+
     }
 }

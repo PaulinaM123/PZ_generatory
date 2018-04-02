@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="PZ_generatory.UserControlGeneratory"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:PZ_generatory"
+             mc:Ignorable="d" 
+             Height="540" Width="1020">
+    <Grid Background="LightGray">
+        <ScrollViewer  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" >
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button Width="190" Height="100">
+                    <StackPanel Orientation="Vertical" >
+                        <TextBlock Text="Generator progowy" TextWrapping="Wrap" FontSize="18"  VerticalAlignment="Center" Margin="10"/>
+                </StackPanel>
+            </Button>
+            <Button Width="190" Height="100">
+                <StackPanel Orientation="Vertical">
+                   <TextBlock Text="Generator Rueppela" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                </StackPanel>
+            </Button>
+            <Button Width="190" Height="100">
+                <StackPanel Orientation="Vertical">
+                   <TextBlock Text="Generator rozrzedzający" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                </StackPanel>
+            </Button>
+            <Button Width="150" Height="100">
+                <StackPanel Orientation="Vertical">
+                   <TextBlock Text="Generator Geffego" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                </StackPanel>
+            </Button>
+            <Button Width="190" Height="100">
+                <StackPanel Orientation="Vertical">
+                   <TextBlock Text="Generator    stop-and-go" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                </StackPanel>
+            </Button>
+            <Button Width="190" Height="100">
+                <StackPanel Orientation="Vertical">
+                     <TextBlock Text="Kaskada Gollmana" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                </StackPanel>
+            </Button>
+            <Button Width="190" Height="100">
+                <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Generator obcinający" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                </StackPanel>
+            </Button>
+            <Button Width="190" Height="100">
+                <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Generator samoobcinający" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
