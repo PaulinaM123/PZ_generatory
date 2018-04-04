@@ -8,49 +8,79 @@
              mc:Ignorable="d" 
              Height="540" Width="1020">
     <Grid Background="LightGray">
-        <ScrollViewer  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" >
-        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Left">
-            <Button Width="190" Height="100">
-                    <StackPanel Orientation="Vertical" >
-                        <TextBlock Text="Generator progowy" TextWrapping="Wrap" FontSize="18"  VerticalAlignment="Center" Margin="10"/>
-                </StackPanel>
-            </Button>
-            <Button Width="190" Height="100">
-                <StackPanel Orientation="Vertical">
-                   <TextBlock Text="Generator Rueppela" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
-                </StackPanel>
-            </Button>
-            <Button Width="190" Height="100">
-                <StackPanel Orientation="Vertical">
-                   <TextBlock Text="Generator rozrzedzający" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
-                </StackPanel>
-            </Button>
-            <Button Width="150" Height="100">
-                <StackPanel Orientation="Vertical">
-                   <TextBlock Text="Generator Geffego" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
-                </StackPanel>
-            </Button>
-            <Button Width="190" Height="100">
-                <StackPanel Orientation="Vertical">
-                   <TextBlock Text="Generator    stop-and-go" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
-                </StackPanel>
-            </Button>
-            <Button Width="190" Height="100">
-                <StackPanel Orientation="Vertical">
-                     <TextBlock Text="Kaskada Gollmana" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
-                </StackPanel>
-            </Button>
-            <Button Width="190" Height="100">
-                <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Generator obcinający" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
-                </StackPanel>
-            </Button>
-            <Button Width="190" Height="100">
-                <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Generator samoobcinający" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
-                </StackPanel>
-            </Button>
-        </StackPanel>
-        </ScrollViewer>
+
+        <ContentControl x:Name="ContentListGeneratory" Margin= "0,421,0,0" Visibility="Visible">
+            <Grid Background="#FF224BB6">
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" >
+                    <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Button x:Name="Progowy" Width="190" Height="100" Background="#FF267BB6" Click="Progowy_Click">
+                            <StackPanel Orientation="Vertical" >
+                                <TextBlock Text="Generator progowy" TextWrapping="Wrap" FontSize="18"  VerticalAlignment="Center" Margin="10"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Rueppela" Width="190" Height="100" Background="#FF267BB6" Click="Rueppela_Click">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Generator Rueppela" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Rozrzedzający" Width="190" Height="100" Background="#FF267BB6" Click="Rozrzedzający_Click">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Generator rozrzedzający" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Geffego" Width="190" Height="100" Background="#FF267BB6" Click="Geffego_Click">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Generator Geffego" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Stop_and_go" Width="190" Height="100" Background="#FF267BB6" Click="Stop_and_go_Click">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Generator    stop-and-go" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Gollmana" Width="190" Height="100" Background="#FF267BB6" Click="Gollmana_Click">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Kaskada Gollmana" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Obcinający" Width="190" Height="100" Background="#FF267BB6" Click="Obcinający_Click">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Generator obcinający" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="Samoobcinający" Width="190" Height="100" Background="#FF267BB6" Click="Samoobcinający_Click">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Generator samoobcinający" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </ContentControl>
+
+        <ContentControl x:Name="ContentProgowy" Margin="0,2,0,124" Visibility="Hidden">
+            <Label Content="Siema tu PROGOWY" FontSize="20" HorizontalAlignment="Center" Margin="430,190,402,0" VerticalAlignment="Top"/>
+        </ContentControl>
+        <ContentControl x:Name="ContentRueppela" Margin="0,2,0,124" Visibility="Hidden">
+            <Label Content="Siema tu RUEPPELA" FontSize="20" HorizontalAlignment="Center" Margin="430,190,402,0" VerticalAlignment="Top"/>
+        </ContentControl>
+        <ContentControl x:Name="ContentRozrzedzający" Margin="0,2,0,124" Visibility="Hidden">
+            <Label Content="Siema tu ROZRZEDZAJĄCY" FontSize="20" HorizontalAlignment="Center" Margin="430,190,308,0" VerticalAlignment="Top" Width="282"/>
+        </ContentControl>
+        <ContentControl x:Name="ContentGeffego" Margin="0,2,0,124" Visibility="Hidden">
+            <Label Content="Siema tu GEFFEGO" FontSize="20" HorizontalAlignment="Center" Margin="430,190,402,0" VerticalAlignment="Top"/>
+        </ContentControl>
+        <ContentControl x:Name="ContentStop_and_go" Margin="0,2,0,124" Visibility="Hidden">
+            <Label Content="Siema tu STOP-AND-GO" FontSize="20" HorizontalAlignment="Center" Margin="430,190,250,0" VerticalAlignment="Top" Width="340"/>
+        </ContentControl>
+        <ContentControl x:Name="ContentGollmana" Margin="0,2,0,124" Visibility="Hidden">
+            <Label Content="Siema tu GOLLMANA" FontSize="20" HorizontalAlignment="Center" Margin="430,190,319,0" VerticalAlignment="Top" Width="271"/>
+        </ContentControl>
+        <ContentControl x:Name="ContentObcinający" Margin="0,2,0,124" Visibility="Hidden">
+            <Label Content="Siema tu OBCINAJĄCY" FontSize="20" HorizontalAlignment="Center" Margin="430,190,127,0" VerticalAlignment="Top" Width="463"/>
+        </ContentControl>
+        <ContentControl x:Name="ContentSamoobcinający" Margin="0,2,0,124" Visibility="Hidden">
+            <Label Content="Siema tu SAMOOBCINAJĄCY" FontSize="20" HorizontalAlignment="Center" Margin="430,190,208,0" VerticalAlignment="Top" Width="382"/>
+        </ContentControl>
     </Grid>
 </UserControl>
