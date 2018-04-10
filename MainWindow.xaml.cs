@@ -55,6 +55,7 @@ namespace PZ_generatory
                     break;
                 case "ItemGeneratory":
                     usc = new UserControlGeneratory();
+                    //usc = new UserControl_progowy();
                     GridMain.Children.Add(usc);
                     break;
                 case "ItemSzyfrator":

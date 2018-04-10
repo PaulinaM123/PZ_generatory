@@ -6,8 +6,12 @@
         xmlns:local="clr-namespace:PZ_generatory"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="White">
-    <Window.Resources>
+        Title="MainWindow" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" ShowInTaskbar="False" AllowsTransparency="True"
+         Background="Transparent" Foreground="White">
+    
+            
+        <Window.Resources>
         <Storyboard x:Key="MenuClose">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu" >
                 <EasingDoubleKeyFrame KeyTime="0" Value="200"/>
@@ -33,17 +37,18 @@
 
 
 
-    <Grid Background="LightGray" >
-        <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="540" Width="1020"/>
+    <Grid Background="White"  >
+        <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="540" Width="1020" >
+        </Grid>
         <Grid Height="60" VerticalAlignment="Top" Background="#FF267BB6">
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
                 <materialDesign:PopupBox  Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                     <StackPanel Width="150">
                         <Button>
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon  Kind="Settings" Width="20" Height="20" VerticalAlignment="Center"/>
-                            <TextBlock Text="Ustawienia" VerticalAlignment="Center" Margin="10"/>
-                        </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon  Kind="Settings" Width="20" Height="20" VerticalAlignment="Center"/>
+                                <TextBlock Text="Ustawienia" VerticalAlignment="Center" Margin="10"/>
+                            </StackPanel>
                         </Button>
                         <Button>
                             <StackPanel Orientation="Horizontal">
@@ -114,4 +119,5 @@
             </StackPanel>
         </Grid>
     </Grid>
+    
 </Window>

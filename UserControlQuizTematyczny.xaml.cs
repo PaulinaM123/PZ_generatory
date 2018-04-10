@@ -24,5 +24,38 @@ namespace PZ_generatory
         {
             InitializeComponent();
         }
+
+        
+
+        private void Generatory_liniowe_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl usc = null;
+            GridQuiz.Children.Clear();
+            usc = new Quiz_generatory();
+            GridQuiz.Children.Add(usc);
+            }
+
+        private void Szyfry_proste_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl usc = null;
+            GridQuiz.Children.Clear();
+            usc = new Quiz_szyfry();
+            GridQuiz.Children.Add(usc);
+        }
+
+        private void Testy_FIPS_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Funkcje_skrótu_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Szyfratory_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

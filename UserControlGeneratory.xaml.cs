@@ -25,18 +25,15 @@ namespace PZ_generatory
             InitializeComponent();
         }
 
+        SolidColorBrush active = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF224BB6"));
+        SolidColorBrush normal = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF267BB6"));
+
         private void Progowy_Click(object sender, RoutedEventArgs e)
         {
-            ContentProgowy.Visibility = Visibility.Visible;
-            ContentRueppela.Visibility = Visibility.Hidden;
-            ContentRozrzedzający.Visibility = Visibility.Hidden;
-            ContentGeffego.Visibility = Visibility.Hidden;
-            ContentStop_and_go.Visibility = Visibility.Hidden;
-            ContentGollmana.Visibility = Visibility.Hidden;
-            ContentObcinający.Visibility = Visibility.Hidden;
-            ContentSamoobcinający.Visibility = Visibility.Hidden;
-            SolidColorBrush active= new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF224BB6"));
-            SolidColorBrush normal = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF267BB6"));
+            UserControl usc = null;
+            GridGeneratory.Children.Clear();
+            usc = new UserControl_progowy();
+            GridGeneratory.Children.Add(usc);
             Progowy.Background = active;
             Rueppela.Background = normal;
             Rozrzedzający.Background = normal;
@@ -49,16 +46,9 @@ namespace PZ_generatory
 
         private void Rueppela_Click(object sender, RoutedEventArgs e)
         {
-            ContentProgowy.Visibility = Visibility.Hidden;
-            ContentRueppela.Visibility = Visibility.Visible;
-            ContentRozrzedzający.Visibility = Visibility.Hidden;
-            ContentGeffego.Visibility = Visibility.Hidden;
-            ContentStop_and_go.Visibility = Visibility.Hidden;
-            ContentGollmana.Visibility = Visibility.Hidden;
-            ContentObcinający.Visibility = Visibility.Hidden;
-            ContentSamoobcinający.Visibility = Visibility.Hidden;
-            SolidColorBrush active = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF224BB6"));
-            SolidColorBrush normal = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF267BB6"));
+            UserControl usc = null;
+            GridGeneratory.Children.Clear();
+            usc = new UserControl_rueppela();
             Progowy.Background = normal;
             Rueppela.Background = active;
             Rozrzedzający.Background = normal;
@@ -71,16 +61,9 @@ namespace PZ_generatory
 
         private void Rozrzedzający_Click(object sender, RoutedEventArgs e)
         {
-            ContentProgowy.Visibility = Visibility.Hidden;
-            ContentRueppela.Visibility = Visibility.Hidden;
-            ContentRozrzedzający.Visibility = Visibility.Visible;
-            ContentGeffego.Visibility = Visibility.Hidden;
-            ContentStop_and_go.Visibility = Visibility.Hidden;
-            ContentGollmana.Visibility = Visibility.Hidden;
-            ContentObcinający.Visibility = Visibility.Hidden;
-            ContentSamoobcinający.Visibility = Visibility.Hidden;
-            SolidColorBrush active = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF224BB6"));
-            SolidColorBrush normal = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF267BB6"));
+            UserControl usc = null;
+            GridGeneratory.Children.Clear();
+            usc = new UserControl_rozrzedzający();
             Progowy.Background = normal;
             Rueppela.Background = normal;
             Rozrzedzający.Background = active;
@@ -93,16 +76,9 @@ namespace PZ_generatory
 
         private void Geffego_Click(object sender, RoutedEventArgs e)
         {
-            ContentProgowy.Visibility = Visibility.Hidden;
-            ContentRueppela.Visibility = Visibility.Hidden;
-            ContentRozrzedzający.Visibility = Visibility.Hidden;
-            ContentGeffego.Visibility = Visibility.Visible;
-            ContentStop_and_go.Visibility = Visibility.Hidden;
-            ContentGollmana.Visibility = Visibility.Hidden;
-            ContentObcinający.Visibility = Visibility.Hidden;
-            ContentSamoobcinający.Visibility = Visibility.Hidden;
-            SolidColorBrush active = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF224BB6"));
-            SolidColorBrush normal = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF267BB6"));
+            UserControl usc = null;
+            GridGeneratory.Children.Clear();
+            usc = new UserControl_geffego();
             Progowy.Background = normal;
             Rueppela.Background = normal;
             Rozrzedzający.Background = normal;
@@ -115,16 +91,9 @@ namespace PZ_generatory
 
         private void Stop_and_go_Click(object sender, RoutedEventArgs e)
         {
-            ContentProgowy.Visibility = Visibility.Hidden;
-            ContentRueppela.Visibility = Visibility.Hidden;
-            ContentRozrzedzający.Visibility = Visibility.Hidden;
-            ContentGeffego.Visibility = Visibility.Hidden;
-            ContentStop_and_go.Visibility = Visibility.Visible;
-            ContentGollmana.Visibility = Visibility.Hidden;
-            ContentObcinający.Visibility = Visibility.Hidden;
-            ContentSamoobcinający.Visibility = Visibility.Hidden;
-            SolidColorBrush active = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF224BB6"));
-            SolidColorBrush normal = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF267BB6"));
+            UserControl usc = null;
+            GridGeneratory.Children.Clear();
+            usc = new UserControl_stop_and_go();
             Progowy.Background = normal;
             Rueppela.Background = normal;
             Rozrzedzający.Background = normal;
@@ -137,16 +106,10 @@ namespace PZ_generatory
 
         private void Gollmana_Click(object sender, RoutedEventArgs e)
         {
-            ContentProgowy.Visibility = Visibility.Hidden;
-            ContentRueppela.Visibility = Visibility.Hidden;
-            ContentRozrzedzający.Visibility = Visibility.Hidden;
-            ContentGeffego.Visibility = Visibility.Hidden;
-            ContentStop_and_go.Visibility = Visibility.Hidden;
-            ContentGollmana.Visibility = Visibility.Visible;
-            ContentObcinający.Visibility = Visibility.Hidden;
-            ContentSamoobcinający.Visibility = Visibility.Hidden;
-            SolidColorBrush active = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF224BB6"));
-            SolidColorBrush normal = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF267BB6"));
+
+            UserControl usc = null;
+            GridGeneratory.Children.Clear();
+            usc = new UserControl_gollmana();
             Progowy.Background = normal;
             Rueppela.Background = normal;
             Rozrzedzający.Background = normal;
@@ -159,16 +122,9 @@ namespace PZ_generatory
 
         private void Obcinający_Click(object sender, RoutedEventArgs e)
         {
-            ContentProgowy.Visibility = Visibility.Hidden;
-            ContentRueppela.Visibility = Visibility.Hidden;
-            ContentRozrzedzający.Visibility = Visibility.Hidden;
-            ContentGeffego.Visibility = Visibility.Hidden;
-            ContentStop_and_go.Visibility = Visibility.Hidden;
-            ContentGollmana.Visibility = Visibility.Hidden;
-            ContentObcinający.Visibility = Visibility.Visible;
-            ContentSamoobcinający.Visibility = Visibility.Hidden;
-            SolidColorBrush active = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF224BB6"));
-            SolidColorBrush normal = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF267BB6"));
+            UserControl usc = null;
+            GridGeneratory.Children.Clear();
+            usc = new UserControl_obcinający();
             Progowy.Background = normal;
             Rueppela.Background = normal;
             Rozrzedzający.Background = normal;
@@ -181,16 +137,9 @@ namespace PZ_generatory
 
         private void Samoobcinający_Click(object sender, RoutedEventArgs e)
         {
-            ContentProgowy.Visibility = Visibility.Hidden;
-            ContentRueppela.Visibility = Visibility.Hidden;
-            ContentRozrzedzający.Visibility = Visibility.Hidden;
-            ContentGeffego.Visibility = Visibility.Hidden;
-            ContentStop_and_go.Visibility = Visibility.Hidden;
-            ContentGollmana.Visibility = Visibility.Hidden;
-            ContentObcinający.Visibility = Visibility.Hidden;
-            ContentSamoobcinający.Visibility = Visibility.Visible;
-            SolidColorBrush active = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF224BB6"));
-            SolidColorBrush normal = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF267BB6"));
+            UserControl usc = null;
+            GridGeneratory.Children.Clear();
+            usc = new UserControl_samoobcinający();
             Progowy.Background = normal;
             Rueppela.Background = normal;
             Rozrzedzający.Background = normal;

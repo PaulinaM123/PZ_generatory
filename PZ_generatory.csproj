@@ -60,6 +60,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Quiz_generatory.xaml.cs">
+      <DependentUpon>Quiz_generatory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz_szyfry.xaml.cs">
+      <DependentUpon>Quiz_szyfry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TickToAngleConverter.cs" />
+    <Compile Include="TimerArc.cs" />
     <Compile Include="UserControlGeneratory.xaml.cs">
       <DependentUpon>UserControlGeneratory.xaml</DependentUpon>
     </Compile>
@@ -75,6 +83,30 @@
     <Compile Include="UserControlTesty.xaml.cs">
       <DependentUpon>UserControlTesty.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_geffego.xaml.cs">
+      <DependentUpon>UserControl_geffego.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_gollmana.xaml.cs">
+      <DependentUpon>UserControl_gollmana.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_obcinający.xaml.cs">
+      <DependentUpon>UserControl_obcinający.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_progowy.xaml.cs">
+      <DependentUpon>UserControl_progowy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_rozrzedzający.xaml.cs">
+      <DependentUpon>UserControl_rozrzedzający.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_rueppela.xaml.cs">
+      <DependentUpon>UserControl_rueppela.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_samoobcinający.xaml.cs">
+      <DependentUpon>UserControl_samoobcinający.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_stop_and_go.xaml.cs">
+      <DependentUpon>UserControl_stop_and_go.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -87,6 +119,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Quiz_generatory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Quiz_szyfry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControlGeneratory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +144,38 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControlTesty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_geffego.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_gollmana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_obcinający.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_progowy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_rozrzedzający.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_rueppela.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_samoobcinający.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl_stop_and_go.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,6 +206,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\p1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\p2.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

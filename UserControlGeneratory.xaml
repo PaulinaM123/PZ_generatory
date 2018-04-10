@@ -7,8 +7,7 @@
              xmlns:local="clr-namespace:PZ_generatory"
              mc:Ignorable="d" 
              Height="540" Width="1020">
-    <Grid Background="LightGray">
-
+    <Grid Background="White">
         <ContentControl x:Name="ContentListGeneratory" Margin= "0,421,0,0" Visibility="Visible">
             <Grid Background="#FF224BB6">
                 <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" >
@@ -57,30 +56,7 @@
                 </ScrollViewer>
             </Grid>
         </ContentControl>
+        <Grid x:Name="GridGeneratory" HorizontalAlignment="Left" Height="412" Margin="4,4,0,0" VerticalAlignment="Top" Width="1012"/>
 
-        <ContentControl x:Name="ContentProgowy" Margin="0,2,0,124" Visibility="Hidden">
-            <Label Content="Siema tu PROGOWY" FontSize="20" HorizontalAlignment="Center" Margin="430,190,402,0" VerticalAlignment="Top"/>
-        </ContentControl>
-        <ContentControl x:Name="ContentRueppela" Margin="0,2,0,124" Visibility="Hidden">
-            <Label Content="Siema tu RUEPPELA" FontSize="20" HorizontalAlignment="Center" Margin="430,190,402,0" VerticalAlignment="Top"/>
-        </ContentControl>
-        <ContentControl x:Name="ContentRozrzedzający" Margin="0,2,0,124" Visibility="Hidden">
-            <Label Content="Siema tu ROZRZEDZAJĄCY" FontSize="20" HorizontalAlignment="Center" Margin="430,190,308,0" VerticalAlignment="Top" Width="282"/>
-        </ContentControl>
-        <ContentControl x:Name="ContentGeffego" Margin="0,2,0,124" Visibility="Hidden">
-            <Label Content="Siema tu GEFFEGO" FontSize="20" HorizontalAlignment="Center" Margin="430,190,402,0" VerticalAlignment="Top"/>
-        </ContentControl>
-        <ContentControl x:Name="ContentStop_and_go" Margin="0,2,0,124" Visibility="Hidden">
-            <Label Content="Siema tu STOP-AND-GO" FontSize="20" HorizontalAlignment="Center" Margin="430,190,250,0" VerticalAlignment="Top" Width="340"/>
-        </ContentControl>
-        <ContentControl x:Name="ContentGollmana" Margin="0,2,0,124" Visibility="Hidden">
-            <Label Content="Siema tu GOLLMANA" FontSize="20" HorizontalAlignment="Center" Margin="430,190,319,0" VerticalAlignment="Top" Width="271"/>
-        </ContentControl>
-        <ContentControl x:Name="ContentObcinający" Margin="0,2,0,124" Visibility="Hidden">
-            <Label Content="Siema tu OBCINAJĄCY" FontSize="20" HorizontalAlignment="Center" Margin="430,190,127,0" VerticalAlignment="Top" Width="463"/>
-        </ContentControl>
-        <ContentControl x:Name="ContentSamoobcinający" Margin="0,2,0,124" Visibility="Hidden">
-            <Label Content="Siema tu SAMOOBCINAJĄCY" FontSize="20" HorizontalAlignment="Center" Margin="430,190,208,0" VerticalAlignment="Top" Width="382"/>
-        </ContentControl>
     </Grid>
 </UserControl>
