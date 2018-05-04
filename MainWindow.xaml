@@ -46,23 +46,29 @@
                 <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
                     <materialDesign:PopupBox  Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                         <StackPanel Width="150">
-                            <Button>
+                            <Button >
                                 <StackPanel Orientation="Horizontal">
                                     <materialDesign:PackIcon  Kind="Settings" Width="20" Height="20" VerticalAlignment="Center"/>
-                                    <TextBlock Text="Ustawienia" VerticalAlignment="Center" Margin="10"/>
+                                    <TextBlock Text="Ustawienia" VerticalAlignment="Center" Margin="10,0,0,0"/>
                                 </StackPanel>
                             </Button>
                             <Button>
                                 <StackPanel Orientation="Horizontal">
                                     <materialDesign:PackIcon  Kind="HelpCircle" Width="20" Height="20" VerticalAlignment="Center"/>
-                                    <TextBlock Text="Pomoc" VerticalAlignment="Center" Margin="10"/>
+                                    <TextBlock Text="Pomoc" VerticalAlignment="Center" Margin="10,0,0,0"/>
                                 </StackPanel>
                             </Button>
                             <Separator/>
                             <Button>
                                 <StackPanel Orientation="Horizontal">
                                     <materialDesign:PackIcon  Kind="Cow" Width="20" Height="20" VerticalAlignment="Center"/>
-                                    <TextBlock Text="O programie" VerticalAlignment="Center" Margin="10"/>
+                                    <TextBlock Text="O programie" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Click="Login_click">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon  Kind="Account" Width="20" Height="20" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Panel Admina" VerticalAlignment="Center" Margin="10,0,0,0"/>
                                 </StackPanel>
                             </Button>
                             <!--<Button x:Name="ButtonPopUpLogout" Content="Logout" Click="ButtonPopUpLogout_Click"/>-->

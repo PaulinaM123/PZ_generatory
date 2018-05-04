@@ -75,5 +75,9 @@ namespace PZ_generatory
             }
         }
 
+        private void Login_click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
