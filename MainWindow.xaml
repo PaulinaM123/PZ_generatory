@@ -13,13 +13,15 @@
 
     <Window.Resources>
         <Storyboard x:Key="MenuClose">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu" >
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" 
+                                           Storyboard.TargetName="GridMenu" >
                 <EasingDoubleKeyFrame KeyTime="0" Value="200"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="60"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="MenuOpen">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu" >
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" 
+                                           Storyboard.TargetName="GridMenu" >
                 <EasingDoubleKeyFrame KeyTime="0" Value="60"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="200"/>
             </DoubleAnimationUsingKeyFrames>
@@ -38,18 +40,23 @@
 
 
     <Grid Background="White"  >
-        <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="547" Width="1020" >
+        <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" 
+              Height="547" Width="1020" >
         </Grid>
         
             <Grid Height="53" VerticalAlignment="Top" Background="#FF224BB6">
             <Border BorderThickness="0 2 0 2" BorderBrush="White">
-                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
-                    <materialDesign:PopupBox  Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
-                        <StackPanel Width="150">
+                <StackPanel VerticalAlignment="Center" Orientation="Horizontal" 
+                            HorizontalAlignment="Right">
+                    <materialDesign:PopupBox  Margin="10" PlacementMode="BottomAndAlignRightEdges"
+                                              StaysOpen="False">
+                        <StackPanel Width="160">
                             <Button >
                                 <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon  Kind="Settings" Width="20" Height="20" VerticalAlignment="Center"/>
-                                    <TextBlock Text="Ustawienia" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                                    <materialDesign:PackIcon  Kind="Settings" Width="20" Height="20"
+                                                              VerticalAlignment="Center"/>
+                                    <TextBlock Text="Ustawienia" VerticalAlignment="Center" 
+                                               Margin="10,0,0,0"/>
                                 </StackPanel>
                             </Button>
                             <Button>
@@ -65,7 +72,7 @@
                                     <TextBlock Text="O programie" VerticalAlignment="Center" Margin="10,0,0,0"/>
                                 </StackPanel>
                             </Button>
-                            <Button Click="Login_click">
+                            <Button x:Name="ButtonAdminPanel" Click="ButtonAdminPanel_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <materialDesign:PackIcon  Kind="Account" Width="20" Height="20" VerticalAlignment="Center"/>
                                     <TextBlock Text="Panel Admina" VerticalAlignment="Center" Margin="10,0,0,0"/>
@@ -87,18 +94,39 @@
         <Grid x:Name="GridMenu" Width="200" HorizontalAlignment="Left" Background="#FF224BB6" Margin="0,53,0,0">
             <StackPanel>
                 <Grid Height="59" Background="#FF224BB6" >
-                    <Button x:Name="ButtonCloseMenu"  Height="54" Width="60" Margin="0,0,5,0" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonCloseMenu_Click">
+                    <Button x:Name="ButtonCloseMenu"  Height="54" Width="60" Margin="0,0,5,0"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top" 
+                            Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                            Background="{x:Null}" 
+                            BorderBrush="{x:Null}"
+                            Foreground="White" 
+                            Click="ButtonCloseMenu_Click">
+                        
                         <materialDesign:PackIcon Kind="ArrowLeft" Width="25" Height="25"/>
+                        
                     </Button>
-                    <Button x:Name="ButtonOpenMenu" Visibility="Collapsed" Height="60" Width="60"  HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonOpenMenu_Click">
+                    <Button x:Name="ButtonOpenMenu" Visibility="Collapsed" Height="60" Width="60"  
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top" 
+                            Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                            Background="{x:Null}" 
+                            BorderBrush="{x:Null}" 
+                            Foreground="White" 
+                            Click="ButtonOpenMenu_Click">
+                        
                         <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
+                        
                     </Button>
                 </Grid>
-                <ListView x:Name="ListViewMenu" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="White"  SelectionChanged="ListViewMenu_SelectionChanged">
+                <ListView x:Name="ListViewMenu" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          Foreground="White"  SelectionChanged="ListViewMenu_SelectionChanged">
                     <ListViewItem x:Name="ItemStronaGłówna" Height="60" IsSelected="True">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon  Kind="Home" Margin="10" Width="25" Height="25" VerticalAlignment="Center"/>
-                            <TextBlock Text="STRONA GŁÓWNA" FontWeight="Bold" VerticalAlignment="Center" Margin="20 10"/>
+                            <materialDesign:PackIcon  Kind="Home" Margin="10" Width="25" Height="25" 
+                                                      VerticalAlignment="Center"/>
+                            <TextBlock Text="STRONA GŁÓWNA" FontWeight="Bold" VerticalAlignment="Center"
+                                       Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemGeneratory"  Height="60">

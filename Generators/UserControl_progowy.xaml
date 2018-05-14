@@ -11,9 +11,9 @@
     <Grid>
             <Label Content="GENERATOR PROGOWY" FontSize="24" FontStyle="Italic" HorizontalAlignment="Left" Height="42" Margin="384,2,0,0" VerticalAlignment="Top" Width="316" Foreground="#FF224BB6"/>
             <Label HorizontalAlignment="Left" FontSize="15" Height="38" Margin="66,45,0,0"  VerticalAlignment="Top" Width="914" Content="Zaproponowany przez J.O. Bruera w 1984 r. Używa zmiennej (nieparzystej) liczby rejestrów LFSR. Funkcję progową wyraża się wzorem:" />
-            <Image HorizontalAlignment="Left" Height="136" Margin="364,187,0,0" VerticalAlignment="Top" Width="287" Source="Images\p2.PNG" />
+            <Image HorizontalAlignment="Left" Height="136" Margin="364,187,0,0" VerticalAlignment="Top" Width="287" Source="/Images/p2.PNG" />
             <Label HorizontalAlignment="Left" FontSize="15" Margin="53,126,0,0"  Content="Okres tego generatora jest maksymalny wtedy gdy długości wszystkich rejestrów są względnie pierwsze,  a wielomiany gałęzi sprzężenia&#xD;&#xA;zwrotnego pierwotne. Złożoność liniowa generatora zbudowanego z trzech rejestrów jest równa L1L2 + L1L3 + L2L3,  gdzie L oznacza &#xD;&#xA;długość rejestru, a jego okres jest iloczynem okresów trzech rejestrów składowych." VerticalAlignment="Top" Height="79" Width="913"/>
-            <Image HorizontalAlignment="Left" Height="52" Margin="410,76,0,0" VerticalAlignment="Top" Width="260" Source="Images/p1.PNG" />
+            <Image HorizontalAlignment="Left" Height="52" Margin="410,76,0,0" VerticalAlignment="Top" Width="260" Source="/Images/p1.PNG" />
             <Button  Height="Auto" Click="Button_Click" HorizontalAlignment="Center" Content="WYGENERUJ CIĄG" Margin="424,360,448,144"></Button>
         </Grid>
     </Grid>

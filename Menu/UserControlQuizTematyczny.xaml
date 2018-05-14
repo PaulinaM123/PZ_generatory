@@ -5,38 +5,46 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PZ_generatory"
             mc:Ignorable="d" 
-             Height="540" Width="1020">
+             Height="550" Width="1020">
     <Grid Background="White">
-        <ContentControl x:Name="ContentListGeneratory" Margin= "0,421,0,0" Visibility="Visible">
-            <Grid Background="#FF224BB6">
-                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" >
-                    <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Left">
-                        <Button x:Name="Generatory_liniowe" Width="190" Height="100" Background="#FF267BB6" Click="Generatory_liniowe_Click">
-                            <StackPanel Orientation="Vertical" >
-                                <TextBlock Text="Generatoy liniowe" TextWrapping="Wrap" FontSize="18"  VerticalAlignment="Center" Margin="10"/>
-                            </StackPanel>
-                        </Button>
-                        <Button x:Name="Szyfry_proste" Width="190" Height="100" Background="#FF267BB6" Click="Szyfry_proste_Click">
+        <ContentControl x:Name="ContentListCategory" Margin= "0,0,0,422" Visibility="Visible">
+            <Grid Background="#FF224BB6" Margin="0,0,0,10">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition  Height="120"/>
+                            <!--<RowDefinition Height="120"/>
+                            <RowDefinition Height="120"/> -->
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <!-- <ColumnDefinition Width="70"/> -->
+                            <ColumnDefinition Width="220"/>
+                            <ColumnDefinition Width="220"/>
+                            <ColumnDefinition Width="220"/>
+                            <ColumnDefinition Width="220"/>
+                            <!-- <ColumnDefinition Width="70"/> -->
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Grid.Row="0" x:Name="Generatory_liniowe" Width="190" Height="100" Background="#FF267BB6"  Margin="12,10,21,11">
                             <StackPanel Orientation="Vertical">
-                                <TextBlock Text="Szyfry proste" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                                <TextBlock Text="Generatory liniowe" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
                             </StackPanel>
                         </Button>
-                        <Button x:Name="Testy_FIPS" Width="190" Height="100" Background="#FF267BB6" Click="Testy_FIPS_Click">
+                        <Button Grid.Column="1" Grid.Row="0" x:Name="Szyfry_proste" Width="190" Height="100" Background="#FF267BB6"  Margin="12,10,21,11">
                             <StackPanel Orientation="Vertical">
-                                <TextBlock Text="Testy FIPS" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                                <TextBlock Text="Szyfry_proste" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
                             </StackPanel>
                         </Button>
-                        <Button x:Name="Funkcje_skrótu" Width="190" Height="100" Background="#FF267BB6" Click="Funkcje_skrótu_Click">
+                        <Button Grid.Column="2" Grid.Row="0" x:Name="Testy_FIPS" Width="190" Height="100" Background="#FF267BB6"  Margin="12,10,21,11">
                             <StackPanel Orientation="Vertical">
-                                <TextBlock Text="Funkcje skrótu" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                                <TextBlock Text="Testy_FIPS" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
                             </StackPanel>
                         </Button>
-                        <Button x:Name="szyfratory" Width="190" Height="100" Background="#FF267BB6" Click="Szyfratory_Click">
+                        <Button Grid.Column="3" Grid.Row="0" x:Name="Funkcje_skrótu" Width="190" Height="100" Background="#FF267BB6"  Margin="12,10,21,11">
                             <StackPanel Orientation="Vertical">
-                                <TextBlock Text="Szyfratory" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
+                                <TextBlock Text="Funkcje_skrótu" TextWrapping="Wrap" FontSize="18" VerticalAlignment="Center" Margin="10"/>
                             </StackPanel>
                         </Button>
-                    </StackPanel>
+                    </Grid>
                 </ScrollViewer>
             </Grid>
         </ContentControl>

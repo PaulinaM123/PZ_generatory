@@ -75,9 +75,15 @@ namespace PZ_generatory
             }
         }
 
-        private void Login_click(object sender, RoutedEventArgs e)
+        private void ButtonAdminPanel_Click(object sender, RoutedEventArgs e)
         {
+            ChangeMainUserControl(new UserControlAdminPanel());
+        }
 
+        private void ChangeMainUserControl(UserControl userControl)
+        {
+            GridMain.Children.Clear();
+            GridMain.Children.Add(userControl);
         }
     }
 }
