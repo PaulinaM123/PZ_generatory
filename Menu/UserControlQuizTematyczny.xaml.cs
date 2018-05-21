@@ -1,5 +1,7 @@
-﻿using System;
+﻿using PZ_generatory.Menu.QuizUserControls;
+using System;
 using System.Collections.Generic;
+using System.Data.Linq;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,42 +22,25 @@ namespace PZ_generatory
     /// </summary>
     public partial class UserControlQuizTematyczny : UserControl
     {
+
         public UserControlQuizTematyczny()
         {
             InitializeComponent();
+
+            LoadCategoriesToWrapPanelFromDataBase();
         }
 
-        
-
-        private void Generatory_liniowe_Click(object sender, RoutedEventArgs e)
+        private void LoadCategoriesToWrapPanelFromDataBase()
         {
-            UserControl usc = null;
-            GridQuiz.Children.Clear();
-            usc = new Quiz_generatory();
-            GridQuiz.Children.Add(usc);
-            }
-
-        private void Szyfry_proste_Click(object sender, RoutedEventArgs e)
-        {
-            UserControl usc = null;
-            GridQuiz.Children.Clear();
-            usc = new Quiz_szyfry();
-            GridQuiz.Children.Add(usc);
+            var db = new DBLinqClassesDataContext();
+            var categories = db.Categories;
+            ItemContorlWrapPranel.ItemsSource = categories;
         }
 
-        private void Testy_FIPS_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Funkcje_skrótu_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Szyfratory_Click(object sender, RoutedEventArgs e)
-        {
-
+            UserControl usc = new StartQuiz();
+            GridMain.Children.Add(usc);
         }
     }
 }

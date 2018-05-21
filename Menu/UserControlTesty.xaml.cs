@@ -23,6 +23,19 @@ namespace PZ_generatory
         public UserControlTesty()
         {
             InitializeComponent();
+            LoadTestName();
+        }
+
+        private void LoadTestName()
+        {
+            List<string> generators = new List<string>();
+            generators.Add("Test Pojdeynczych Bitów");
+            generators.Add("Test Serii");
+            generators.Add("Test Długiej Serii");
+            generators.Add("Test Pokerowy");
+
+            ItemContorlWrapPranel.ItemsSource = generators;
         }
     }
+
 }

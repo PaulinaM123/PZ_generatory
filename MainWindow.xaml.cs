@@ -45,30 +45,30 @@ namespace PZ_generatory
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UserControl usc = null;
-            GridMain.Children.Clear();
+            WrapMain.Children.Clear();
 
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
                 case "ItemStronaGłówna":
                     usc = new UserControlStronaGłówna();
-                    GridMain.Children.Add(usc);
+                    WrapMain.Children.Add(usc);
                     break;
                 case "ItemGeneratory":
                     usc = new UserControlGeneratory();
                     //usc = new UserControl_progowy();
-                    GridMain.Children.Add(usc);
+                    WrapMain.Children.Add(usc);
                     break;
                 case "ItemSzyfrator":
                     usc = new UserControlSzyfrator();
-                    GridMain.Children.Add(usc);
+                    WrapMain.Children.Add(usc);
                     break;
                 case "ItemTesty":
                     usc = new UserControlTesty();
-                    GridMain.Children.Add(usc);
+                    WrapMain.Children.Add(usc);
                     break;
                 case "ItemQuizTematyczny":
                     usc = new UserControlQuizTematyczny();
-                    GridMain.Children.Add(usc);
+                    WrapMain.Children.Add(usc);
                     break;
                 default:
                     break;
@@ -82,8 +82,8 @@ namespace PZ_generatory
 
         private void ChangeMainUserControl(UserControl userControl)
         {
-            GridMain.Children.Clear();
-            GridMain.Children.Add(userControl);
+            WrapMain.Children.Clear();
+            WrapMain.Children.Add(userControl);
         }
     }
 }

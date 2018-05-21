@@ -66,6 +66,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
@@ -86,6 +87,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DBLinqClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLinqClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Rozrzedzajacy\Output_rozrzedzajacy.xaml.cs">
+      <DependentUpon>Output_rozrzedzajacy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Rozrzedzajacy\UserControl_rozrzedzający.xaml.cs">
+      <DependentUpon>UserControl_rozrzedzający.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Rozrzedzajacy\Ustawienia_rozrzedzajacy.xaml.cs">
+      <DependentUpon>Ustawienia_rozrzedzajacy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\QuizUserControls\Question.xaml.cs">
+      <DependentUpon>Question.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\QuizUserControls\StartQuiz.xaml.cs">
+      <DependentUpon>StartQuiz.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Menu\Quiz_generatory.xaml.cs">
       <DependentUpon>Quiz_generatory.xaml</DependentUpon>
     </Compile>
@@ -124,9 +145,6 @@
     <Compile Include="Generators\UserControl_progowy.xaml.cs">
       <DependentUpon>UserControl_progowy.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Generators\UserControl_rozrzedzający.xaml.cs">
-      <DependentUpon>UserControl_rozrzedzający.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Generators\UserControl_rueppela.xaml.cs">
       <DependentUpon>UserControl_rueppela.xaml</DependentUpon>
     </Compile>
@@ -136,6 +154,18 @@
     <Compile Include="Generators\UserControl_stop_and_go.xaml.cs">
       <DependentUpon>UserControl_stop_and_go.xaml</DependentUpon>
     </Compile>
+    <Page Include="Generators\Rozrzedzajacy\Output_rozrzedzajacy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Rozrzedzajacy\UserControl_rozrzedzający.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Rozrzedzajacy\Ustawienia_rozrzedzajacy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -148,6 +178,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Menu\QuizUserControls\Question.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu\QuizUserControls\StartQuiz.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Menu\Quiz_generatory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -196,10 +234,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Generators\UserControl_rozrzedzający.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Generators\UserControl_rueppela.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -231,7 +265,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="DBLinqClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DBLinqClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBLinqClasses.dbml.layout">
+      <DependentUpon>DBLinqClasses.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -265,6 +309,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="PZ_generatory.UserControl_rozrzedzający"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:PZ_generatory"
+             mc:Ignorable="d" 
+             Height="550" Width="1012">
+    <Grid Background="White">
+        <Grid x:Name="GridRzrzedzajacy">
+            <Label Content="GENERATOR ROZRZEDZAJĄCY" FontSize="24" FontStyle="Italic" HorizontalAlignment="Left" Height="42" Margin="384,2,0,0" VerticalAlignment="Top" Width="349" Foreground="#FF224BB6"/>
+            <!--<TextBlock HorizontalAlignment="Left" FontSize="15" Margin="62,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="897"><Run Text="Generator z"/><Run Text="aproponowany w 1993 roku przez D.Coppersmitha, H.Krawczyka i Y.Mansoura. "/><Run Text=" W"/><Run Text="y"/><Run Text="korzystuje dwa rejestry LFSR."/><Run Text=" Bity wyjściowe jednego z rejestrów decyduję, które bity wyjściowe drugiego rejestru będ"/><Run Text="ą"/><Run Text=" wykorzystane, a które odrzuco"/><Run Text="n"/><Run Text="e."/><LineBreak/><Run Text="J"/><Run Text="eśli na wyjściu rejestru S pojawi się '1', bit wyjściowy rejestru A jest dołączany do ciągu klucza ki. Obydwa rejestry pracują równocześnie"/><Run Text="."/><LineBreak/><LineBreak/><Run/></TextBlock>-->
+            <Label Foreground="Black" HorizontalAlignment="Left" FontSize="15" Height="93" Margin="58,47,0,0"  VerticalAlignment="Top" Width="914" Content="Generator zaproponowany w 1993 roku przez D.Coppersmitha, H.Krawczyka i Y.Mansoura.  Wykorzystuje dwa rejestry LFSR. &#xD;&#xA;Bity wyjściowe jednego z rejestrów decyduję, które bity wyjściowe drugiego rejestru będą wykorzystane, a które odrzucone. &#xD;&#xA;Jeśli na wyjściu rejestru S pojawi się '1', bit wyjściowy rejestru A jest dołączany do ciągu klucza ki. Obydwa rejestry pracują&#xD;&#xA; równocześnie." />
+            <Image HorizontalAlignment="Left" Height="136" Margin="348,130,0,0" VerticalAlignment="Top" Width="287" Source="/Images/gen_rozrzedzajacy.PNG" />
+            <Button  Height="Auto" Click="Wykorzystaj_Click" HorizontalAlignment="Center" Content="WYKORZYSTAJ GENERATOR" Margin="414,337,381,130" Width="217"></Button>
+            <Image HorizontalAlignment="Left" Height="54" Margin="395,266,0,0" VerticalAlignment="Top" Width="207" Source="/Images/wzor_rozrzedzajacy.PNG" />
+            <!--<TextBlock HorizontalAlignment="Left" FontSize="15" Margin="64,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Jeżeli dłu"/><Run Text="gości rejestrów sa względnie pierwsze, to okres takiego generatora wynosi"/><Run Text=":"/></TextBlock>-->
+            <Label Foreground="Black" HorizontalAlignment="Left" FontSize="15" Height="38" Margin="66,224,0,0"  VerticalAlignment="Top" Width="914" Content="Jeżeli długości rejestrów sa względnie pierwsze, to okres takiego generatora wynosi:" />
+        </Grid>
+    </Grid>
+</UserControl>
