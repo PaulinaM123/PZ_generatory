@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PZ_generatory.Generators.Samoobcinajacy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,27 +17,21 @@ using System.Windows.Shapes;
 namespace PZ_generatory
 {
     /// <summary>
-    /// Interaction logic for UserControlSzyfrator.xaml
+    /// Interaction logic for UserControl_samoobcinający.xaml
     /// </summary>
-    public partial class UserControlSzyfrator : UserControl
+    public partial class UserControl_samoobcinający : UserControl
     {
-        public UserControlSzyfrator()
+        public UserControl_samoobcinający()
         {
             InitializeComponent();
         }
 
-        private void Szyfrator_Click(object sender, RoutedEventArgs e)
+        private void Wykorzystaj_Click(object sender, RoutedEventArgs e)
         {
-            UserControl usc = new Encryptor();
-            UserChoice.Children.Add(usc);
+            UserControl usc = null;
+            GridSamoobcinajacy.Children.Clear();
+            usc = new Settings_samoobcinajacy();
+            GridSamoobcinajacy.Children.Add(usc);
         }
-
-        private void Deszyfrator_Click(object sender, RoutedEventArgs e)
-        {
-            UserControl usc = new Decryptor();
-            UserChoice.Children.Add(usc);
-        }
-
-
     }
 }

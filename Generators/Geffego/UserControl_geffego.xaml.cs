@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PZ_generatory.Generators.Geffego;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,21 @@ using System.Windows.Shapes;
 namespace PZ_generatory
 {
     /// <summary>
-    /// Interaction logic for UserControl_rueppela.xaml
+    /// Interaction logic for UserControl_geffego.xaml
     /// </summary>
-    public partial class UserControl_rueppela : UserControl
+    public partial class UserControl_geffego : UserControl
     {
-        public UserControl_rueppela()
+        public UserControl_geffego()
         {
             InitializeComponent();
+        }
+
+        private void Wykorzystaj_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl usc = null;
+            GridGeffego.Children.Clear();
+            usc = new Settings_geffego();
+            GridGeffego.Children.Add(usc);
         }
     }
 }

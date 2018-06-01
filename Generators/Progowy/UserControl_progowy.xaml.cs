@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PZ_generatory.Generators.Progowy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,21 @@ using System.Windows.Shapes;
 namespace PZ_generatory
 {
     /// <summary>
-    /// Interaction logic for UserControl_geffego.xaml
+    /// Interaction logic for UserControl_progowy.xaml
     /// </summary>
-    public partial class UserControl_geffego : UserControl
+    public partial class UserControl_progowy : UserControl
     {
-        public UserControl_geffego()
+        public UserControl_progowy()
         {
             InitializeComponent();
+        }
+
+        private void Wykorzystaj_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl usc = null;
+            GridProgowy.Children.Clear();
+            usc = new Settings_progowy();
+            GridProgowy.Children.Add(usc);
         }
     }
 }

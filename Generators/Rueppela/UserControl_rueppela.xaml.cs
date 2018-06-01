@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PZ_generatory.Generators.Rueppela;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,21 @@ using System.Windows.Shapes;
 namespace PZ_generatory
 {
     /// <summary>
-    /// Interaction logic for UserControl_gollmana.xaml
+    /// Interaction logic for UserControl_rueppela.xaml
     /// </summary>
-    public partial class UserControl_gollmana : UserControl
+    public partial class UserControl_rueppela : UserControl
     {
-        public UserControl_gollmana()
+        public UserControl_rueppela()
         {
             InitializeComponent();
+        }
+
+        private void Wykorzystaj_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl usc = null;
+            GridRueppela.Children.Clear();
+            usc = new Settings_rueppela();
+            GridRueppela.Children.Add(usc);
         }
     }
 }

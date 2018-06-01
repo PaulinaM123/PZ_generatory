@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PZ_generatory
+namespace PZ_generatory.Menu
 {
     /// <summary>
-    /// Interaction logic for UserControl_samoobcinający.xaml
+    /// Interaction logic for UserControlAbout.xaml
     /// </summary>
-    public partial class UserControl_samoobcinający : UserControl
+    public partial class UserControlAbout : UserControl
     {
-        public UserControl_samoobcinający()
+        public UserControlAbout()
         {
             InitializeComponent();
         }

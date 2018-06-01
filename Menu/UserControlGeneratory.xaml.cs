@@ -31,14 +31,13 @@ namespace PZ_generatory
         {
             List<string> generators = new List<string>();
             generators.Add("Generator Progowy");
-            generators.Add("Generatora Samodecydującego Rueppela");
+            generators.Add("Generator Samodecymujący Rueppela");
             generators.Add("Generator Rozrzedzający");
             generators.Add("Generator Geffego");
             generators.Add("Przemienny Generator stop-and-go");
             generators.Add("Kaskada Gollmana");
             generators.Add("Generator Obcinający");
             generators.Add("Generator Samoobcinający");
-
 
             ItemContorlWrapPranel.ItemsSource = generators;
         }
@@ -48,7 +47,8 @@ namespace PZ_generatory
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-             UserControl usc = new UserControl_rozrzedzający();
+            
+            UserControl usc = new UserControl_progowy();
             UserControlChange.Children.Add(usc);
         }
     }

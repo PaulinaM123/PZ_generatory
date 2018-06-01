@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PZ_generatory.Generators.Stop_and_go;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,14 @@ namespace PZ_generatory
         public UserControl_stop_and_go()
         {
             InitializeComponent();
+        }
+
+        private void Wykorzystaj_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl usc = null;
+            GridStop_and_go.Children.Clear();
+            usc = new Settings_stop_and_go();
+            GridStop_and_go.Children.Add(usc);
         }
     }
 }

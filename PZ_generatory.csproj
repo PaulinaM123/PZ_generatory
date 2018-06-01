@@ -92,6 +92,43 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBLinqClasses.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Encryptor\Decryptor.xaml.cs">
+      <DependentUpon>Decryptor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Encryptor\Encryptor.xaml.cs">
+      <DependentUpon>Encryptor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Geffego\GeffesGenerator.cs" />
+    <Compile Include="Generators\Geffego\Settings_geffego.xaml.cs">
+      <DependentUpon>Settings_geffego.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Geffego\UserControl_geffego.xaml.cs">
+      <DependentUpon>UserControl_geffego.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Gollmana\CascadeGenerator.cs" />
+    <Compile Include="Generators\Gollmana\Settings_gollmana.xaml.cs">
+      <DependentUpon>Settings_gollmana.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Gollmana\UserControl_gollmana.xaml.cs">
+      <DependentUpon>UserControl_gollmana.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\IGenerators.cs" />
+    <Compile Include="Generators\Lfsr.cs" />
+    <Compile Include="Generators\LfsrGenerator.cs" />
+    <Compile Include="Generators\Obcinajacy\Settings_obcinajacy.xaml.cs">
+      <DependentUpon>Settings_obcinajacy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Obcinajacy\ShrinkingGenerator.cs" />
+    <Compile Include="Generators\Obcinajacy\UserControl_obcinający.xaml.cs">
+      <DependentUpon>UserControl_obcinający.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Progowy\Settings_progowy.xaml.cs">
+      <DependentUpon>Settings_progowy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Progowy\ThresholdGenerator.cs" />
+    <Compile Include="Generators\Progowy\UserControl_progowy.xaml.cs">
+      <DependentUpon>UserControl_progowy.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Generators\Rozrzedzajacy\Output_rozrzedzajacy.xaml.cs">
       <DependentUpon>Output_rozrzedzajacy.xaml</DependentUpon>
     </Compile>
@@ -101,6 +138,28 @@
     <Compile Include="Generators\Rozrzedzajacy\Ustawienia_rozrzedzajacy.xaml.cs">
       <DependentUpon>Ustawienia_rozrzedzajacy.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Generators\Rueppela\SelfDecimationGenerator.cs" />
+    <Compile Include="Generators\Rueppela\Settings_rueppela.xaml.cs">
+      <DependentUpon>Settings_rueppela.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Rueppela\UserControl_rueppela.xaml.cs">
+      <DependentUpon>UserControl_rueppela.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Samoobcinajacy\SelfShrinkingGenerator.cs" />
+    <Compile Include="Generators\Samoobcinajacy\Settings_samoobcinajacy.xaml.cs">
+      <DependentUpon>Settings_samoobcinajacy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Samoobcinajacy\UserControl_samoobcinający.xaml.cs">
+      <DependentUpon>UserControl_samoobcinający.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\SeriesConverter.cs" />
+    <Compile Include="Generators\Stop_and_go\Settings_stop_and_go.xaml.cs">
+      <DependentUpon>Settings_stop_and_go.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Generators\Stop_and_go\StopAndGoGenerator.cs" />
+    <Compile Include="Generators\Stop_and_go\UserControl_stop_and_go.xaml.cs">
+      <DependentUpon>UserControl_stop_and_go.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Menu\QuizUserControls\Question.xaml.cs">
       <DependentUpon>Question.xaml</DependentUpon>
     </Compile>
@@ -109,6 +168,9 @@
     </Compile>
     <Compile Include="Menu\Quiz_generatory.xaml.cs">
       <DependentUpon>Quiz_generatory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\UserControlAbout.xaml.cs">
+      <DependentUpon>UserControlAbout.xaml</DependentUpon>
     </Compile>
     <Compile Include="Menu\UserControlAdminPanel.xaml.cs">
       <DependentUpon>UserControlAdminPanel.xaml</DependentUpon>
@@ -133,27 +195,46 @@
     <Compile Include="Menu\UserControlTesty.xaml.cs">
       <DependentUpon>UserControlTesty.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Generators\UserControl_geffego.xaml.cs">
-      <DependentUpon>UserControl_geffego.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Generators\UserControl_gollmana.xaml.cs">
-      <DependentUpon>UserControl_gollmana.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Generators\UserControl_obcinający.xaml.cs">
-      <DependentUpon>UserControl_obcinający.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Generators\UserControl_progowy.xaml.cs">
-      <DependentUpon>UserControl_progowy.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Generators\UserControl_rueppela.xaml.cs">
-      <DependentUpon>UserControl_rueppela.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Generators\UserControl_samoobcinający.xaml.cs">
-      <DependentUpon>UserControl_samoobcinający.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Generators\UserControl_stop_and_go.xaml.cs">
-      <DependentUpon>UserControl_stop_and_go.xaml</DependentUpon>
-    </Compile>
+    <Page Include="Encryptor\Decryptor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Encryptor\Encryptor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Geffego\Settings_geffego.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Geffego\UserControl_geffego.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Gollmana\Settings_gollmana.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Gollmana\UserControl_gollmana.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Obcinajacy\Settings_obcinajacy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Obcinajacy\UserControl_obcinający.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Progowy\Settings_progowy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Progowy\UserControl_progowy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Generators\Rozrzedzajacy\Output_rozrzedzajacy.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -163,6 +244,30 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Generators\Rozrzedzajacy\Ustawienia_rozrzedzajacy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Rueppela\Settings_rueppela.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Rueppela\UserControl_rueppela.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Samoobcinajacy\Settings_samoobcinajacy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Samoobcinajacy\UserControl_samoobcinający.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Stop_and_go\Settings_stop_and_go.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Generators\Stop_and_go\UserControl_stop_and_go.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -190,6 +295,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Menu\UserControlAbout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Menu\UserControlAdminPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -215,34 +324,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Menu\UserControlTesty.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Generators\UserControl_geffego.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Generators\UserControl_gollmana.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Generators\UserControl_obcinający.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Generators\UserControl_progowy.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Generators\UserControl_rueppela.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Generators\UserControl_samoobcinający.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Generators\UserControl_stop_and_go.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -313,6 +394,22 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\gen_geffego.png" />
+    <Resource Include="Images\gen_gollmana.PNG" />
+    <Resource Include="Images\gen_obcinajacy.png" />
+    <Resource Include="Images\gen_progowy.PNG" />
+    <Resource Include="Images\gen_rozrzedzajacy.png" />
+    <Resource Include="Images\gen_rueppela.PNG" />
+    <Resource Include="Images\gen_samoobcinajacy.png" />
+    <Resource Include="Images\gen_stop_and_go.png" />
+    <Resource Include="Images\wz_geffego.png" />
+    <Resource Include="Images\wz_gollmana.PNG" />
+    <Resource Include="Images\wz_gollmana2.PNG" />
+    <Resource Include="Images\wz_obcinajacy.png" />
+    <Resource Include="Images\wz_progowy.png" />
+    <Resource Include="Images\wz_rozrzedzajacy.png" />
+    <Resource Include="Images\wz_rueppela.PNG" />
+    <Resource Include="Images\wz_stop_and_go.png" />
     <Content Include="ProjectDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -321,6 +418,7 @@
       <DependentUpon>ProjectDb.mdf</DependentUpon>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

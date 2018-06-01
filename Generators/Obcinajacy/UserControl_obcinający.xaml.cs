@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PZ_generatory.Generators.Obcinajacy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,18 +17,21 @@ using System.Windows.Shapes;
 namespace PZ_generatory
 {
     /// <summary>
-    /// Interaction logic for UserControl_progowy.xaml
+    /// Interaction logic for UserControl_obcinający.xaml
     /// </summary>
-    public partial class UserControl_progowy : UserControl
+    public partial class UserControl_obcinający : UserControl
     {
-        public UserControl_progowy()
+        public UserControl_obcinający()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Wykorzystaj_Click(object sender, RoutedEventArgs e)
         {
-
+            UserControl usc = null;
+            GridObcinajacy.Children.Clear();
+            usc = new Settings_obcinajacy();
+            GridObcinajacy.Children.Add(usc);
         }
     }
 }

@@ -77,8 +77,8 @@
                                 </StackPanel>
                             </Button>
                             <Separator/>
-                            <Button>
-                                <StackPanel Orientation="Horizontal">
+                            <Button x:Name="ButtonAbout" Click="ButtonAbout_Click">
+                                <StackPanel Orientation="Horizontal" >
                                     <materialDesign:PackIcon  Kind="Cow" Width="20" Height="20" VerticalAlignment="Center"/>
                                     <TextBlock Text="O programie" VerticalAlignment="Center" Margin="10,0,0,0"/>
                                 </StackPanel>
