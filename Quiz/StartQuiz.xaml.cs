@@ -52,6 +52,7 @@ namespace PZ_generatory.Quiz
             var button = sender as Button;
             if (quizmanager.actualQuestion == 0)
             {
+                HowManyQuestionLabel.Visibility = Visibility.Hidden;
                 button.Content = "Następne pytanie";
                 buttonBackToCAtegoryChoice.Visibility = Visibility.Hidden;
                 quizmanager.NextQuestion(sender,e);
