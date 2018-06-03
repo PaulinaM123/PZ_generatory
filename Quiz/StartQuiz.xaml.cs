@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 
 
@@ -11,14 +12,23 @@ namespace PZ_generatory.Quiz
         public int categoryId { get; set; }
 
         QuizManager quizmanager;
+       
 
         public StartQuiz(int categoryid, string categoryname)
         {
             InitializeComponent();
-            this.quizmanager = new QuizManager(categoryId, QuestionPlace, QuestionNumberLabel);
+            this.quizmanager = new QuizManager(categoryId, QuestionPlace, QuestionNumberLabel, ChangeButtonNextquestion);
             this.categoryName = categoryname;
             this.categoryId = categoryid;
+
             LabelCategoryChoice.Content = "Wybrana kategoria: " + categoryName;
+        }
+
+        public void ChangeButtonNextquestion(object sender, EventArgs e)
+        {
+            buttonStartQuiz.Content = "Wróć do wyboru kategorii";
+            buttonStartQuiz.Click -= buttonQuiz_Click;
+            buttonStartQuiz.Click += buttonBackToCAtegoryChoice_Click;
         }
 
         private void buttonBackToCAtegoryChoice_Click(object sender, RoutedEventArgs e)
@@ -33,16 +43,7 @@ namespace PZ_generatory.Quiz
             {
                 button.Content = "Następne pytanie";
                 buttonBackToCAtegoryChoice.Visibility = Visibility.Hidden;
-                quizmanager.NextQuestion();
-            }
-            else if(quizmanager.actualQuestion >= quizmanager.howManyQuestionInQuiz)
-            {
-                button.Content = "Wróć do wyboru kategorii";
-                button.Click -= buttonQuiz_Click;
-                button.Click += buttonBackToCAtegoryChoice_Click;
-
-                var a = (UserControlQuestion)QuestionPlace.Children[0];
-                a.EndQuestion(e);
+                quizmanager.NextQuestion(sender,e);
             }
             else
             {

@@ -15,7 +15,6 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="ProgressBar">
                         <Grid>
-
                             <Ellipse Fill="{TemplateBinding Background}" Stroke="Black"/>
                             <Ellipse Fill="White" Stroke="Black" Margin="40" />
 

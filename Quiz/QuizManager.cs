@@ -16,8 +16,9 @@ namespace PZ_generatory.Quiz
         StackPanel questionPlace;
         Label InfoAboutActualQuestion;
         bool[] UserAnswears;
+        public event EventHandler ChangeButtonNextquestionEvent;
 
-        public QuizManager(int categoryId, StackPanel questionPlace, Label infoAboutActualQuestion)
+        public QuizManager(int categoryId, StackPanel questionPlace, Label infoAboutActualQuestion,EventHandler ChangeButtonNextquestion)
         {
             List<Question> allQuestionFromCategory = loadQuestionByCategory(categoryId);
             howManyQuestionInCategory = allQuestionFromCategory.Count();
@@ -25,6 +26,7 @@ namespace PZ_generatory.Quiz
             this.questionPlace = questionPlace;
             this.InfoAboutActualQuestion = infoAboutActualQuestion;
             this.UserAnswears = new bool[howManyQuestionInQuiz];
+            this.ChangeButtonNextquestionEvent = ChangeButtonNextquestion;
         }
 
         public int HowManyQuestionInCategory()
@@ -55,13 +57,15 @@ namespace PZ_generatory.Quiz
         public void QuestionEnded(object sender, EventArgs e)
         {
             var a = sender as UserControlQuestion;
+            if (a.Questionnumber == actualQuestion)
+            { 
+            UserAnswears[actualQuestion - 1] = a._isCorrect;
 
-            UserAnswears[actualQuestion-1] = a._isCorrect;
-
-            NextQuestion();
+            NextQuestion(sender, e);
+            }
         }
 
-        public void NextQuestion()
+        public void NextQuestion(object sender, EventArgs e)
         {
             UserControl a;
             if (actualQuestion > howManyQuestionInQuiz - 1)
@@ -81,6 +85,10 @@ namespace PZ_generatory.Quiz
                         badAnswer++;
                     }
                 }
+                EventHandler handler = ChangeButtonNextquestionEvent;
+                 handler(this, e);
+
+
                 a = new EndQuizUserControl(goodAnswer, UserAnswears.Length);
             }
             else
@@ -89,6 +97,18 @@ namespace PZ_generatory.Quiz
                 a = new UserControlQuestion(_questions[actualQuestion], QuestionEnded, actualQuestion);
                 actualQuestion++;
             }
+            if (actualQuestion > 1)
+            {
+                var b = questionPlace.Children[0] as UserControlQuestion;
+                var c = b.TimerGrid.Children[0] as TimerControl;
+
+                var d = c.Animation;
+                var g = c.timer;
+
+                
+            }
+           
+
             questionPlace.Children.Clear();
             questionPlace.Children.Add(a);
         }

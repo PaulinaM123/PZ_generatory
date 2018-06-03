@@ -35,7 +35,7 @@ namespace PZ_generatory.Quiz
             }
             else if(procent > 25)
             {
-                msg = "No kilka pytań było faktycznie dobrze";
+                msg = "No no, kilka pytań było faktycznie dobrze";
             }
             else
             {
