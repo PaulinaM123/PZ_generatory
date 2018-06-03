@@ -1,23 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PZ_generatory
 {
-    /// <summary>
-    /// Interaction logic for UserControlGeneratory.xaml
-    /// </summary>
     public partial class UserControlGeneratory : UserControl
     {
         public UserControlGeneratory()
@@ -42,14 +29,50 @@ namespace PZ_generatory
             ItemContorlWrapPranel.ItemsSource = generators;
         }
 
-        SolidColorBrush active = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF224BB6"));
-        SolidColorBrush normal = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF267BB6"));
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            UserControl usc = new UserControl_progowy();
-            UserControlChange.Children.Add(usc);
+            Button button = sender as Button;
+            TextBlock textblock = button.Content as TextBlock;
+            string GeneratorName = textblock.Text;
+
+            try
+            {
+                UserControl usc;
+                switch (GeneratorName)
+                {
+                    case "Generator Progowy":
+                        usc = new UserControl_progowy();
+                        break;
+                    case "Generator Samodecymujący Rueppela":
+                        usc = new UserControl_rueppela();
+                        break;
+                    case "Generator Rozrzedzający":
+                        usc = new UserControl_rozrzedzający();
+                        break;
+                    case "Generator Geffego":
+                        usc = new UserControl_geffego();
+                        break;
+                    case "Przemienny Generator stop-and-go":
+                        usc = new UserControl_stop_and_go();
+                        break;
+                    case "Kaskada Gollmana":
+                        usc = new UserControl_gollmana();
+                        break;
+                    case "Generator Obcinający":
+                        usc = new UserControl_obcinający();
+                        break;
+                    case "Generator Samoobcinający":
+                        usc = new UserControl_samoobcinający();
+                        break;
+                    default:
+                        throw new Exception("Generatory - brak takiego generatora");
+                }
+
+                UserControlChange.Children.Add(usc);
+            }catch(Exception catchedException)
+            {
+                Console.WriteLine(catchedException.Message);
+            }
         }
     }
 }

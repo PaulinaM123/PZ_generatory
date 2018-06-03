@@ -1,4 +1,4 @@
-﻿using PZ_generatory.Menu.QuizUserControls;
+﻿using PZ_generatory.Quiz;
 using System;
 using System.Collections.Generic;
 using System.Data.Linq;

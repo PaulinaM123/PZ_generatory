@@ -160,14 +160,11 @@
     <Compile Include="Generators\Stop_and_go\UserControl_stop_and_go.xaml.cs">
       <DependentUpon>UserControl_stop_and_go.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Menu\QuizUserControls\Question.xaml.cs">
+    <Compile Include="Quiz\Question.xaml.cs">
       <DependentUpon>Question.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Menu\QuizUserControls\StartQuiz.xaml.cs">
+    <Compile Include="Quiz\StartQuiz.xaml.cs">
       <DependentUpon>StartQuiz.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Menu\Quiz_generatory.xaml.cs">
-      <DependentUpon>Quiz_generatory.xaml</DependentUpon>
     </Compile>
     <Compile Include="Menu\UserControlAbout.xaml.cs">
       <DependentUpon>UserControlAbout.xaml</DependentUpon>
@@ -286,15 +283,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Menu\QuizUserControls\Question.xaml">
+    <Page Include="Quiz\Question.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Menu\QuizUserControls\StartQuiz.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Menu\Quiz_generatory.xaml">
+    <Page Include="Quiz\StartQuiz.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
