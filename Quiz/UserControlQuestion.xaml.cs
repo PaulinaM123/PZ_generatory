@@ -14,14 +14,12 @@ namespace PZ_generatory.Quiz
     /// </summary>
     public partial class UserControlQuestion : UserControl
     {
-        SolidColorBrush _clickedColor = new SolidColorBrush(Color.FromArgb(0, 17, 79, 128));
-        SolidColorBrush _standardColor = new SolidColorBrush(Color.FromArgb(0, 33, 150, 243));
-
         Question _Question;
         List<Answer> _Answears;
         bool[] _UserAnswear;
-        bool _isCorrect;
+        public bool _isCorrect;
         public int Questionnumber;
+        public Brush NormalColor;
 
         public event EventHandler QuestionEnded;
 
@@ -35,6 +33,7 @@ namespace PZ_generatory.Quiz
             this._isCorrect = false;
             this.Questionnumber = questionNumber;
             fillConententOnPage();
+            this.NormalColor = ButtonAnswear_0.Background;
 
             startTimer();
         }
@@ -72,22 +71,27 @@ namespace PZ_generatory.Quiz
 
             var id = Int32.Parse(button.Name.Split('_')[1]);
 
-            ChangeUserAnswear(id);
+            ChangeUserAnswear(sender,id);
         }
 
-        private void ChangeUserAnswear(int id)
+        private void ChangeUserAnswear(object sender,int id)
         {
+            Button button = sender as Button;
             if (_UserAnswear[id])
             {
                 _UserAnswear[id] = false;
+
+                button.Background = NormalColor;
             }
             else
             {
                 _UserAnswear[id] = true;
+                
+                button.Background = new SolidColorBrush(Colors.Orange);
             }
         }
 
-        private void EndQuestion(EventArgs e)
+        public void EndQuestion(EventArgs e)
         {
             bool a = true; ;
             EventHandler handler = QuestionEnded;
@@ -99,6 +103,7 @@ namespace PZ_generatory.Quiz
                     if (_UserAnswear[i] != _Answears[i].Correct)
                     {
                         a = false;
+                        break;
                     }
                 }
                 _isCorrect = a;

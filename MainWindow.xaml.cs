@@ -46,6 +46,8 @@ namespace PZ_generatory
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UserControl usc = null;
+            
+
             WrapMain.Children.Clear();
 
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
@@ -56,7 +58,6 @@ namespace PZ_generatory
                     break;
                 case "ItemGeneratory":
                     usc = new UserControlGeneratory();
-                    //usc = new UserControl_progowy();
                     WrapMain.Children.Add(usc);
                     break;
                 case "ItemSzyfrator":
@@ -96,5 +97,12 @@ namespace PZ_generatory
             WrapMain.Children.Clear();
             WrapMain.Children.Add(userControl);
         }
+    
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
     }
 }

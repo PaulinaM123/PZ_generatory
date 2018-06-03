@@ -10,17 +10,21 @@ namespace PZ_generatory.Quiz
     {
         DBLinqClassesDataContext db = new DBLinqClassesDataContext();
         List<Question> _questions = new List<Question>();
-        int howManyQuestionInQuiz = 8;
-        int actualQuestion = 0;
+        public int howManyQuestionInQuiz = 8;
+        public int actualQuestion = 0;
         int howManyQuestionInCategory;
         StackPanel questionPlace;
+        Label InfoAboutActualQuestion;
+        bool[] UserAnswears;
 
-        public QuizManager(int categoryId, StackPanel questionPlace)
+        public QuizManager(int categoryId, StackPanel questionPlace, Label infoAboutActualQuestion)
         {
             List<Question> allQuestionFromCategory = loadQuestionByCategory(categoryId);
             howManyQuestionInCategory = allQuestionFromCategory.Count();
             randXQuestionsFromAll(allQuestionFromCategory);
             this.questionPlace = questionPlace;
+            this.InfoAboutActualQuestion = infoAboutActualQuestion;
+            this.UserAnswears = new bool[howManyQuestionInQuiz];
         }
 
         public int HowManyQuestionInCategory()
@@ -37,7 +41,7 @@ namespace PZ_generatory.Quiz
         {
             HashSet<int> numbers = new HashSet<int>();
             var rnd = new Random();
-            while (numbers.Count < howManyQuestionInQuiz - 1)
+            while (numbers.Count < howManyQuestionInQuiz )
             {
                 numbers.Add(rnd.Next(0, allQuestionFromCategory.Count));
             }
@@ -48,9 +52,11 @@ namespace PZ_generatory.Quiz
             }
         }
 
-        private void QuestionEndedEvent(object sender, EventArgs e)
+        public void QuestionEnded(object sender, EventArgs e)
         {
-            Console.WriteLine("-----------------------------------------------------------------------------");
+            var a = sender as UserControlQuestion;
+
+            UserAnswears[actualQuestion-1] = a._isCorrect;
 
             NextQuestion();
         }
@@ -58,13 +64,29 @@ namespace PZ_generatory.Quiz
         public void NextQuestion()
         {
             UserControl a;
-            if (actualQuestion >= howManyQuestionInQuiz - 1)
+            if (actualQuestion > howManyQuestionInQuiz - 1)
             {
-                a = new EndQuizUserControl(_questions[1]);
+                InfoAboutActualQuestion.Content = "";
+
+                int goodAnswer = 0;
+                int badAnswer = 0;
+
+                foreach (var item in UserAnswears)
+                {
+                    if (item == true)
+                    {
+                        goodAnswer++;
+                    }else
+                    {
+                        badAnswer++;
+                    }
+                }
+                a = new EndQuizUserControl(goodAnswer, UserAnswears.Length);
             }
             else
             {
-                a = new UserControlQuestion(_questions[actualQuestion], new EventHandler(QuestionEndedEvent), actualQuestion);
+                InfoAboutActualQuestion.Content = ((actualQuestion +1).ToString() + "/" + howManyQuestionInQuiz.ToString());
+                a = new UserControlQuestion(_questions[actualQuestion], QuestionEnded, actualQuestion);
                 actualQuestion++;
             }
             questionPlace.Children.Clear();

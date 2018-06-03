@@ -30,6 +30,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
+
             <Button x:Name="ButtonAnswear_0" Margin="40,10"  Height="80" Grid.Column="0" Grid.Row="0" Click="ButtonAnswear_Click" >
                 <TextBlock x:Name="question1" TextWrapping="Wrap" >
                 </TextBlock>
