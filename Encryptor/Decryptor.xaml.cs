@@ -367,6 +367,10 @@ namespace PZ_generatory
                 tekst.Text = new string(s);
             }
         }
+        private void BackTo_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Panel).Children.Remove(this);
+        }
 
     }
 }

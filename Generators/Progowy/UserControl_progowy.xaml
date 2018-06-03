@@ -5,8 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:PZ_generatory"
-                 mc:Ignorable="d" 
+             mc:Ignorable="d" 
              Height="Auto" Width="Auto" Background="White">
+    <UserControl.Resources>
+        <materialDesign:PackIcon x:Key="ArrowLeft" Kind="ArrowLeft" Foreground="White" Width="40" Height="40"/>
+    </UserControl.Resources>
     <Grid x:Name="GridProgowy">
         <StackPanel HorizontalAlignment="Center" x:Name="StackGrid">
             <Label FontSize="35" Foreground="#FF224BB6" HorizontalContentAlignment="Center" Margin="0,10,0,0" >
@@ -20,9 +23,19 @@
                 <TextBlock TextWrapping="WrapWithOverflow" Text="   Okres tego generatora jest maksymalny wtedy gdy długosci wszystkich rejestrów sa wzglednie pierwsze, a wielomiany gałezi sprzezenia zwrotnego pierwotne. Złozonosc liniowa generatora zbudowanego z trzech rejestrów jest równa L1L2 + L1L3 + L2L3 gdzie L oznacza długosc rejestru, a jego okres jest iloczynem okresów trzech rejestrów składowych." />
             </Label>
             <Image Margin="0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Source="/Images/gen_progowy.PNG" Height="193" Width="418" />
-            <Button Height="50" Width="500" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,-15" Click="Wykorzystaj_Click">
-                <TextBlock TextAlignment="Center" FontSize="25" Text="Wykorzystaj generator" TextWrapping="Wrap" />
-            </Button>
+            <Grid Margin="0,-15">
+                <StackPanel HorizontalAlignment="Left" Margin="50,0">
+                    <Button x:Name="buttonBackToCAtegoryChoice" Height="50"  Click="BackTo_Click" HorizontalContentAlignment="Center">
+                        <DynamicResource ResourceKey="ArrowLeft"/>
+                    </Button>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Margin="50,0">
+                    <Button Height="50" Width="500" HorizontalContentAlignment="Center" VerticalAlignment="Center"  Click="Wykorzystaj_Click">
+                        <TextBlock TextAlignment="Center" FontSize="25" Text="Wykorzystaj generator" TextWrapping="Wrap" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+            
         </StackPanel>
     </Grid>
 </UserControl>

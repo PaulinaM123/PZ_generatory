@@ -67,8 +67,10 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -129,15 +131,6 @@
     <Compile Include="Generators\Progowy\UserControl_progowy.xaml.cs">
       <DependentUpon>UserControl_progowy.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Generators\Rozrzedzajacy\Output_rozrzedzajacy.xaml.cs">
-      <DependentUpon>Output_rozrzedzajacy.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Generators\Rozrzedzajacy\UserControl_rozrzedzający.xaml.cs">
-      <DependentUpon>UserControl_rozrzedzający.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Generators\Rozrzedzajacy\Ustawienia_rozrzedzajacy.xaml.cs">
-      <DependentUpon>Ustawienia_rozrzedzajacy.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Generators\Rueppela\SelfDecimationGenerator.cs" />
     <Compile Include="Generators\Rueppela\Settings_rueppela.xaml.cs">
       <DependentUpon>Settings_rueppela.xaml</DependentUpon>
@@ -160,9 +153,17 @@
     <Compile Include="Generators\Stop_and_go\UserControl_stop_and_go.xaml.cs">
       <DependentUpon>UserControl_stop_and_go.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Quiz\Question.xaml.cs">
-      <DependentUpon>Question.xaml</DependentUpon>
+    <Compile Include="Quiz\TimerArc.cs" />
+    <Compile Include="Quiz\TimerControl.xaml.cs">
+      <DependentUpon>TimerControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Quiz\EndQuizUserControl.xaml.cs">
+      <DependentUpon>EndQuizUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz\UserControlQuestion.xaml.cs">
+      <DependentUpon>UserControlQuestion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz\QuizManager.cs" />
     <Compile Include="Quiz\StartQuiz.xaml.cs">
       <DependentUpon>StartQuiz.xaml</DependentUpon>
     </Compile>
@@ -175,11 +176,7 @@
     <Compile Include="Menu\UserControlAuthors.xaml.cs">
       <DependentUpon>UserControlAuthors.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Quiz_szyfry.xaml.cs">
-      <DependentUpon>Quiz_szyfry.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Converters\TickToAngleConverter.cs" />
-    <Compile Include="TimerArc.cs" />
     <Compile Include="Menu\UserControlGeneratory.xaml.cs">
       <DependentUpon>UserControlGeneratory.xaml</DependentUpon>
     </Compile>
@@ -235,18 +232,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Generators\Rozrzedzajacy\Output_rozrzedzajacy.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Generators\Rozrzedzajacy\UserControl_rozrzedzający.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Generators\Rozrzedzajacy\Ustawienia_rozrzedzajacy.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Generators\Rueppela\Settings_rueppela.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -283,7 +268,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Quiz\Question.xaml">
+    <Page Include="Quiz\TimerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Quiz\EndQuizUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Quiz\UserControlQuestion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -300,10 +293,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Menu\UserControlAuthors.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Quiz_szyfry.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

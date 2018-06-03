@@ -33,5 +33,10 @@ namespace PZ_generatory
             usc = new Settings_stop_and_go();
             GridStop_and_go.Children.Add(usc);
         }
+
+        private void BackTo_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Panel).Children.Remove(this);
+        }
     }
 }

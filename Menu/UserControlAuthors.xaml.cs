@@ -25,9 +25,6 @@ namespace PZ_generatory.Menu
             InitializeComponent();
         }
 
-
-      
-
         private void MouseEnter_P(object sender, MouseEventArgs e)
         {
             BitmapImage logo = new BitmapImage();

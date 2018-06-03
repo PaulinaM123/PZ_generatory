@@ -332,6 +332,11 @@ namespace PZ_generatory
             }
         }
 
+        private void BackTo_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Panel).Children.Remove(this);
+        }
+
 
 
 

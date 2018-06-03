@@ -33,5 +33,11 @@ namespace PZ_generatory
             usc = new Settings_geffego();
             GridGeffego.Children.Add(usc);
         }
+
+        private void BackTo_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Panel).Children.Remove(this);
+        }
+
     }
 }

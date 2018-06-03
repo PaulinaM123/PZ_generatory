@@ -19,7 +19,6 @@ namespace PZ_generatory
             List<string> generators = new List<string>();
             generators.Add("Generator Progowy");
             generators.Add("Generator Samodecymujący Rueppela");
-            generators.Add("Generator Rozrzedzający");
             generators.Add("Generator Geffego");
             generators.Add("Przemienny Generator stop-and-go");
             generators.Add("Kaskada Gollmana");
@@ -45,9 +44,6 @@ namespace PZ_generatory
                         break;
                     case "Generator Samodecymujący Rueppela":
                         usc = new UserControl_rueppela();
-                        break;
-                    case "Generator Rozrzedzający":
-                        usc = new UserControl_rozrzedzający();
                         break;
                     case "Generator Geffego":
                         usc = new UserControl_geffego();

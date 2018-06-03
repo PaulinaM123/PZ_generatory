@@ -33,5 +33,10 @@ namespace PZ_generatory
             usc = new Settings_samoobcinajacy();
             GridSamoobcinajacy.Children.Add(usc);
         }
+
+        private void BackTo_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as Panel).Children.Remove(this);
+        }
     }
 }

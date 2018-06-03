@@ -4,18 +4,34 @@ using System.Windows.Controls;
 
 namespace PZ_generatory.Quiz
 {
+
     public partial class StartQuiz : UserControl
     {
-        public StartQuiz()
+        public string categoryName { get; set; }
+        public int categoryId { get; set; }
+
+        QuizManager quizmanager;
+
+        public StartQuiz(int categoryid, string categoryname)
         {
             InitializeComponent();
+            this.quizmanager = new QuizManager(categoryId, QuestionPlace);
+            this.categoryName = categoryname;
+            this.categoryId = categoryid;
+            LabelCategoryChoice.Content = "Wybrana kategoria: " + categoryName;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void buttonBackToCAtegoryChoice_Click(object sender, RoutedEventArgs e)
         {
-           
-            //UserControl usc = new Question();
-            //StackGrid.Children.Add(usc);
+            (this.Parent as Panel).Children.Remove(this);
+        }
+
+        private void buttonStartQuiz_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            button.Content = "Następne pytanie";
+            quizmanager.NextQuestion();
+
         }
     }
 }
