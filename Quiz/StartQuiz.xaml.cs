@@ -20,6 +20,7 @@ namespace PZ_generatory.Quiz
             this.quizmanager = new QuizManager(categoryid, QuestionPlace, QuestionNumberLabel, ChangeButtonNextquestion);
             this.categoryName = categoryname;
             this.categoryId = categoryid;
+
             HowManyQuestionLabel.Content = "Liczba pytań z danej kategorii: " + quizmanager.howManyQuestionInCategory;
             LabelCategoryChoice.Content = "Wybrana kategoria: " + categoryName;
 
@@ -30,6 +31,7 @@ namespace PZ_generatory.Quiz
             else
             {
                 buttonStartQuiz.IsEnabled = false;
+                GoodLuck.Visibility = Visibility.Hidden;
             }
         }
 

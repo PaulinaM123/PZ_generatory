@@ -29,10 +29,8 @@
             </Label>
             <Label  x:Name="LabelCategoryChoice" Margin="100,0" FontSize="30" Foreground="#FF224BB6" HorizontalAlignment="Center">
             </Label>
-            <Label FontSize="60" Foreground="Orange"  VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center">
-                <TextBlock TextAlignment="Left" TextWrapping="Wrap"><Run />
-                    Powodzenia !
-                </TextBlock>
+            <Label x:Name="GoodLuck" FontSize="60" Foreground="Orange"  VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center">
+                Powodzenia !
             </Label>
         </StackPanel>
         <Grid>
