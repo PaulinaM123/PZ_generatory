@@ -17,11 +17,20 @@ namespace PZ_generatory.Quiz
         public StartQuiz(int categoryid, string categoryname)
         {
             InitializeComponent();
-            this.quizmanager = new QuizManager(categoryId, QuestionPlace, QuestionNumberLabel, ChangeButtonNextquestion);
+            this.quizmanager = new QuizManager(categoryid, QuestionPlace, QuestionNumberLabel, ChangeButtonNextquestion);
             this.categoryName = categoryname;
             this.categoryId = categoryid;
-
+            HowManyQuestionLabel.Content = "Liczba pytań z danej kategorii: " + quizmanager.howManyQuestionInCategory;
             LabelCategoryChoice.Content = "Wybrana kategoria: " + categoryName;
+
+            if (quizmanager._canStart)
+            {
+                buttonStartQuiz.IsEnabled = true;
+            }
+            else
+            {
+                buttonStartQuiz.IsEnabled = false;
+            }
         }
 
         public void ChangeButtonNextquestion(object sender, EventArgs e)

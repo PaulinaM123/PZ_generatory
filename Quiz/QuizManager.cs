@@ -12,11 +12,13 @@ namespace PZ_generatory.Quiz
         List<Question> _questions = new List<Question>();
         public int howManyQuestionInQuiz = 8;
         public int actualQuestion = 0;
-        int howManyQuestionInCategory;
+        public int howManyQuestionInCategory;
         StackPanel questionPlace;
         Label InfoAboutActualQuestion;
         bool[] UserAnswears;
         public event EventHandler ChangeButtonNextquestionEvent;
+
+        public bool _canStart;
 
         public QuizManager(int categoryId, StackPanel questionPlace, Label infoAboutActualQuestion,EventHandler ChangeButtonNextquestion)
         {
@@ -41,23 +43,31 @@ namespace PZ_generatory.Quiz
 
         private void randXQuestionsFromAll(List<Question> allQuestionFromCategory)
         {
-            HashSet<int> numbers = new HashSet<int>();
-            var rnd = new Random();
-            while (numbers.Count < howManyQuestionInQuiz )
-            {
-                numbers.Add(rnd.Next(0, allQuestionFromCategory.Count));
-            }
+            if(allQuestionFromCategory.Count>= howManyQuestionInQuiz)
+            { 
+                HashSet<int> numbers = new HashSet<int>();
+                var rnd = new Random();
+                while (numbers.Count < howManyQuestionInQuiz )
+                {
+                    numbers.Add(rnd.Next(0, allQuestionFromCategory.Count));
+                }
 
-            foreach (var item in numbers)
+                foreach (var item in numbers)
+                {
+                    _questions.Add(allQuestionFromCategory[item]);
+                }
+                _canStart = true;
+            }
+            else
             {
-                _questions.Add(allQuestionFromCategory[item]);
+                _canStart = false;
             }
         }
 
         public void QuestionEnded(object sender, EventArgs e)
         {
             var a = sender as UserControlQuestion;
-            if (a.Questionnumber == actualQuestion)
+            if (a.Questionnumber+1 == actualQuestion)
             { 
             UserAnswears[actualQuestion - 1] = a._isCorrect;
 
