@@ -86,6 +86,11 @@ namespace PZ_generatory
             ChangeMainUserControl(new UserControlAbout());
         }
 
+        private void ButtonAuthors_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeMainUserControl(new UserControlAuthors());
+        }
+
         private void ChangeMainUserControl(UserControl userControl)
         {
             WrapMain.Children.Clear();

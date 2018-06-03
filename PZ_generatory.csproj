@@ -175,6 +175,9 @@
     <Compile Include="Menu\UserControlAdminPanel.xaml.cs">
       <DependentUpon>UserControlAdminPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Menu\UserControlAuthors.xaml.cs">
+      <DependentUpon>UserControlAuthors.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Quiz_szyfry.xaml.cs">
       <DependentUpon>Quiz_szyfry.xaml</DependentUpon>
     </Compile>
@@ -303,6 +306,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Menu\UserControlAuthors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Quiz_szyfry.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -366,18 +373,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\logo1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\p1.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\p2.PNG" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
@@ -402,6 +397,11 @@
     <Resource Include="Images\gen_rueppela.PNG" />
     <Resource Include="Images\gen_samoobcinajacy.png" />
     <Resource Include="Images\gen_stop_and_go.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\logo1.jpg" />
+    <Resource Include="Images\p1.PNG" />
+    <Resource Include="Images\p2.PNG" />
+    <Resource Include="Images\wzor_rozrzedzajacy.png" />
     <Resource Include="Images\wz_geffego.png" />
     <Resource Include="Images\wz_gollmana.PNG" />
     <Resource Include="Images\wz_gollmana2.PNG" />
@@ -410,6 +410,11 @@
     <Resource Include="Images\wz_rozrzedzajacy.png" />
     <Resource Include="Images\wz_rueppela.PNG" />
     <Resource Include="Images\wz_stop_and_go.png" />
+    <Resource Include="Images\nosacz_2.jpg" />
+    <Resource Include="Images\nosacz_1.jpg" />
+    <Resource Include="Images\nosacz.jpg" />
+    <Resource Include="Images\man.jpg" />
+    <Resource Include="Images\woman.jpg" />
     <Content Include="ProjectDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

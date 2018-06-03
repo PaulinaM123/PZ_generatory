@@ -62,27 +62,19 @@
                     <materialDesign:PopupBox  Margin="10" PlacementMode="BottomAndAlignRightEdges"
                                               StaysOpen="False">
                         <StackPanel Width="160">
-                            <Button >
-                                <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon  Kind="Settings" Width="20" Height="20"
-                                                              VerticalAlignment="Center"/>
-                                    <TextBlock Text="Ustawienia" VerticalAlignment="Center" 
-                                               Margin="10,0,0,0"/>
-                                </StackPanel>
-                            </Button>
-                            <Button>
-                                <StackPanel Orientation="Horizontal">
-                                    <materialDesign:PackIcon  Kind="HelpCircle" Width="20" Height="20" VerticalAlignment="Center"/>
-                                    <TextBlock Text="Pomoc" VerticalAlignment="Center" Margin="10,0,0,0"/>
-                                </StackPanel>
-                            </Button>
-                            <Separator/>
                             <Button x:Name="ButtonAbout" Click="ButtonAbout_Click">
                                 <StackPanel Orientation="Horizontal" >
-                                    <materialDesign:PackIcon  Kind="Cow" Width="20" Height="20" VerticalAlignment="Center"/>
+                                    <materialDesign:PackIcon Kind="HelpCircle" Width="20" Height="20" VerticalAlignment="Center"/>
                                     <TextBlock Text="O programie" VerticalAlignment="Center" Margin="10,0,0,0"/>
                                 </StackPanel>
                             </Button>
+                            <Button x:Name="ButtonAuthors" Click="ButtonAuthors_Click">
+                                <StackPanel Orientation="Horizontal" >
+                                    <materialDesign:PackIcon  Kind="Cow" Width="20" Height="20" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Autorzy" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+                            <Separator/>
                             <Button x:Name="ButtonAdminPanel" Click="ButtonAdminPanel_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <materialDesign:PackIcon  Kind="Account" Width="20" Height="20" VerticalAlignment="Center"/>
