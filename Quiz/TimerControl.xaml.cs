@@ -8,7 +8,10 @@ namespace PZ_generatory.Quiz
     public partial class TimerControl : UserControl
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         EventHandler CallBack;
+=======
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
 =======
 >>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
         public TimerControl(int time, EventHandler callBack)

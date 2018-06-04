@@ -27,6 +27,9 @@
                             </StackPanel>
                         </ScrollViewer>
                         
+<<<<<<< HEAD
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
+=======
 >>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
                         <Label Content="Podaj długość ciągu do wygenerowania: " Foreground="#FF224BB6" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="auto"/>
                         <TextBox x:Name="series_length"  FontSize="18" HorizontalAlignment="Left" Height="25" MinWidth="25" Width="auto" TextAlignment="Center" Margin="0,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />

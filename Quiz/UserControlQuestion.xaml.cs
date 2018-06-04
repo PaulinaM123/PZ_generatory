@@ -36,7 +36,10 @@ namespace PZ_generatory.Quiz
             this.Questionnumber = questionNumber;
             fillConententOnPage();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.NormalColor = ButtonAnswear_0.Background;
+=======
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
 =======
 >>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
 

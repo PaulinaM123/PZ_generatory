@@ -22,9 +22,12 @@ namespace PZ_generatory.Quiz
             randXQuestionsFromAll(allQuestionFromCategory);
             this.questionPlace = questionPlace;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.InfoAboutActualQuestion = infoAboutActualQuestion;
             this.UserAnswears = new bool[howManyQuestionInQuiz];
             this.ChangeButtonNextquestionEvent = ChangeButtonNextquestion;
+=======
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
 =======
 >>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
         }
@@ -42,6 +45,7 @@ namespace PZ_generatory.Quiz
         private void randXQuestionsFromAll(List<Question> allQuestionFromCategory)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if(allQuestionFromCategory.Count>= howManyQuestionInQuiz)
             { 
                 HashSet<int> numbers = new HashSet<int>();
@@ -57,11 +61,16 @@ namespace PZ_generatory.Quiz
                 }
                 _canStart = true;
 =======
+=======
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
             HashSet<int> numbers = new HashSet<int>();
             var rnd = new Random();
             while (numbers.Count < howManyQuestionInQuiz - 1)
             {
                 numbers.Add(rnd.Next(0, allQuestionFromCategory.Count));
+<<<<<<< HEAD
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
+=======
 >>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
             }
 
@@ -91,6 +100,7 @@ namespace PZ_generatory.Quiz
                 actualQuestion++;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (actualQuestion > 1)
             {
                 var b = questionPlace.Children[0] as UserControlQuestion;
@@ -103,6 +113,8 @@ namespace PZ_generatory.Quiz
             }
            
 
+=======
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
 =======
 >>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
             questionPlace.Children.Clear();

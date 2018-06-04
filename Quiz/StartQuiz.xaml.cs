@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using System;
 using System.Windows;
+=======
+﻿using System.Windows;
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
 =======
 ﻿using System.Windows;
 >>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil

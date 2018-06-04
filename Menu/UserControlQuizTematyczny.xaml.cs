@@ -1,12 +1,18 @@
 ﻿using PZ_generatory.Quiz;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
 using System;
 using System.Collections.Generic;
 using System.Data.Linq;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
+=======
 >>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
 using System.Windows;
 using System.Windows.Controls;

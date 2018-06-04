@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿using PZ_generatory.AdminPanel;
 using PZ_generatory.Menu;
+=======
+﻿using PZ_generatory.Menu;
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
 =======
 ﻿using PZ_generatory.Menu;
 >>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
@@ -84,6 +88,19 @@ namespace PZ_generatory
         private void ButtonAdminPanel_Click(object sender, RoutedEventArgs e)
         {
             ChangeMainUserControl(new UserControlAdminPanel());
+<<<<<<< HEAD
+=======
+        }
+
+        private void ButtonAbout_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeMainUserControl(new UserControlAbout());
+        }
+
+        private void ButtonAuthors_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeMainUserControl(new UserControlAuthors());
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
         }
 
         private void ChangeMainUserControl(UserControl userControl)
