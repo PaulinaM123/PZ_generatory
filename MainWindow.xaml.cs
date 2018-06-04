@@ -1,4 +1,5 @@
-﻿using PZ_generatory.Menu;
+using PZ_generatory.AdminPanel;
+using PZ_generatory.Menu;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,8 @@ namespace PZ_generatory
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UserControl usc = null;
+            
+
             WrapMain.Children.Clear();
 
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
@@ -56,7 +59,6 @@ namespace PZ_generatory
                     break;
                 case "ItemGeneratory":
                     usc = new UserControlGeneratory();
-                    //usc = new UserControl_progowy();
                     WrapMain.Children.Add(usc);
                     break;
                 case "ItemSzyfrator":
@@ -78,7 +80,18 @@ namespace PZ_generatory
 
         private void ButtonAdminPanel_Click(object sender, RoutedEventArgs e)
         {
-            ChangeMainUserControl(new UserControlAdminPanel());
+
+            ChangeMainUserControl(new LoginToAdminPanel());
+        }
+
+        private void ButtonAbout_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeMainUserControl(new UserControlAbout());
+        }
+
+        private void ButtonAuthors_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeMainUserControl(new UserControlAuthors());
         }
 
         private void ButtonAbout_Click(object sender, RoutedEventArgs e)
@@ -96,5 +109,12 @@ namespace PZ_generatory
             WrapMain.Children.Clear();
             WrapMain.Children.Add(userControl);
         }
+    
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
     }
 }
