@@ -18,19 +18,9 @@
                 Zasady Quizu
             </Label>
             <Label Margin="100,30" FontSize="30" Foreground="#FF224BB6">
-                <TextBlock TextAlignment="Left" TextWrapping="Wrap">
-                    <Run Text="1. Każde pytanie ma określony czas na odpowiedź."/>
-                    <LineBreak/>
-                    <Run Text="2. Pytanie może mieć więcej niz jedną poprawną odpowiedź."/>
-                    <LineBreak/>
-                    <Run Text="3. Nie można "/>
-                    <Run Text="wrócić do poprzedniego pytania."/>
-                </TextBlock>
+                <TextBlock TextAlignment="Left" TextWrapping="Wrap"><Run Text="1. Każde pytania ma określony czas na odpowiedź."/><LineBreak/><Run Text="2. Pytania może mieć więcej niz jedną poprawną odpowiedź."/><LineBreak/><Run Text="3. Nie można "/><Run Text="wrócić do poprzedniego pytania."/><LineBreak/></TextBlock>
             </Label>
-            <Label  x:Name="LabelCategoryChoice" Margin="100,0" FontSize="30" Foreground="#FF224BB6" HorizontalAlignment="Center">
-            </Label>
-            <Label x:Name="GoodLuck" FontSize="60" Foreground="Orange"  VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center">
-                Powodzenia !
+            <Label  x:Name="LabelCategoryChoice" Margin="100,30" FontSize="30" Foreground="#FF224BB6" HorizontalAlignment="Center">
             </Label>
         </StackPanel>
         <Grid>
@@ -39,14 +29,8 @@
                     <DynamicResource ResourceKey="ArrowLeft"/>
                 </Button>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Right" Margin="50,0" Orientation="Horizontal">
-                <Label  x:Name="HowManyQuestionLabel" Foreground="#FF224BB6" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
-                    Liczba pytań z danej kategorii: 84
-                </Label>
-                <Label x:Name="QuestionNumberLabel" Width="100" Foreground="#FF224BB6" FontSize="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
-                    
-                </Label>
-                <Button x:Name="buttonStartQuiz" Height="70"  Click="buttonQuiz_Click">
+            <StackPanel HorizontalAlignment="Right" Margin="50,0">
+                <Button x:Name="buttonStartQuiz" Height="70"  Click="buttonStartQuiz_Click">
                     <TextBlock TextAlignment="Center" FontSize="30" Text="Rozpocznij Quiz" TextWrapping="Wrap" />
                 </Button>
             </StackPanel>

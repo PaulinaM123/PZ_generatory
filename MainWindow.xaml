@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:PZ_generatory"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Generatix" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="True"
-        Background="Transparent" Foreground="White" Icon="Images/logo1.jpg" AllowsTransparency="True" WindowStyle="None" MouseDown="Window_MouseDown">
+        Title="MainWindow" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" ShowInTaskbar="False" AllowsTransparency="True"
+         Background="Transparent" Foreground="White">
 
 
     <Window.Resources>
@@ -19,8 +20,8 @@
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" 
                                            Storyboard.TargetName="WrapMain" >
-                <EasingDoubleKeyFrame KeyTime="0" Value="880"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1020"/>
+            <EasingDoubleKeyFrame KeyTime="0" Value="880"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1020"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="MenuOpen">
@@ -28,7 +29,7 @@
                                            Storyboard.TargetName="GridMenu" >
                 <EasingDoubleKeyFrame KeyTime="0" Value="60"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="200"/>
-
+                
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" 
                                            Storyboard.TargetName="WrapMain" >
@@ -53,8 +54,8 @@
         <StackPanel x:Name="WrapMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" 
               Height="547" Width="880" >
         </StackPanel>
-
-        <Grid Height="53" VerticalAlignment="Top" Background="#FF224BB6">
+        
+            <Grid Height="53" VerticalAlignment="Top" Background="#FF224BB6">
             <Border BorderThickness="0 2 0 2" BorderBrush="White">
                 <StackPanel VerticalAlignment="Center" Orientation="Horizontal" 
                             HorizontalAlignment="Right">
@@ -91,8 +92,8 @@
                 </StackPanel>
             </Border>
             <TextBlock Text="Generatory. Aplikacja edukacyjna." HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
-        </Grid>
-
+            </Grid>
+        
         <Grid x:Name="GridMenu" Width="200" HorizontalAlignment="Left" Background="#FF224BB6" Margin="0,53,0,0">
             <StackPanel>
                 <Grid Height="59" Background="#FF224BB6" >
@@ -104,9 +105,9 @@
                             BorderBrush="{x:Null}"
                             Foreground="White" 
                             Click="ButtonCloseMenu_Click">
-
+                        
                         <materialDesign:PackIcon Kind="ArrowLeft" Width="25" Height="25"/>
-
+                        
                     </Button>
                     <Button x:Name="ButtonOpenMenu" Visibility="Collapsed" Height="60" Width="60"  
                             HorizontalAlignment="Right"
@@ -116,9 +117,9 @@
                             BorderBrush="{x:Null}" 
                             Foreground="White" 
                             Click="ButtonOpenMenu_Click">
-
+                        
                         <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
-
+                        
                     </Button>
                 </Grid>
                 <ListView x:Name="ListViewMenu" ScrollViewer.HorizontalScrollBarVisibility="Disabled"

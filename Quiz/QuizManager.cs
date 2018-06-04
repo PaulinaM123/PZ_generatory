@@ -10,25 +10,23 @@ namespace PZ_generatory.Quiz
     {
         DBLinqClassesDataContext db = new DBLinqClassesDataContext();
         List<Question> _questions = new List<Question>();
-        public int howManyQuestionInQuiz = 8;
-        public int actualQuestion = 0;
-        public int howManyQuestionInCategory;
+        int howManyQuestionInQuiz = 8;
+        int actualQuestion = 0;
+        int howManyQuestionInCategory;
         StackPanel questionPlace;
-        Label InfoAboutActualQuestion;
-        bool[] UserAnswears;
-        public event EventHandler ChangeButtonNextquestionEvent;
 
-        public bool _canStart;
-
-        public QuizManager(int categoryId, StackPanel questionPlace, Label infoAboutActualQuestion,EventHandler ChangeButtonNextquestion)
+        public QuizManager(int categoryId, StackPanel questionPlace)
         {
             List<Question> allQuestionFromCategory = loadQuestionByCategory(categoryId);
             howManyQuestionInCategory = allQuestionFromCategory.Count();
             randXQuestionsFromAll(allQuestionFromCategory);
             this.questionPlace = questionPlace;
+<<<<<<< HEAD
             this.InfoAboutActualQuestion = infoAboutActualQuestion;
             this.UserAnswears = new bool[howManyQuestionInQuiz];
             this.ChangeButtonNextquestionEvent = ChangeButtonNextquestion;
+=======
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
         }
 
         public int HowManyQuestionInCategory()
@@ -43,6 +41,7 @@ namespace PZ_generatory.Quiz
 
         private void randXQuestionsFromAll(List<Question> allQuestionFromCategory)
         {
+<<<<<<< HEAD
             if(allQuestionFromCategory.Count>= howManyQuestionInQuiz)
             { 
                 HashSet<int> numbers = new HashSet<int>();
@@ -57,56 +56,41 @@ namespace PZ_generatory.Quiz
                     _questions.Add(allQuestionFromCategory[item]);
                 }
                 _canStart = true;
-            }
-            else
+=======
+            HashSet<int> numbers = new HashSet<int>();
+            var rnd = new Random();
+            while (numbers.Count < howManyQuestionInQuiz - 1)
             {
-                _canStart = false;
+                numbers.Add(rnd.Next(0, allQuestionFromCategory.Count));
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
+            }
+
+            foreach (var item in numbers)
+            {
+                _questions.Add(allQuestionFromCategory[item]);
             }
         }
 
-        public void QuestionEnded(object sender, EventArgs e)
+        private void QuestionEndedEvent(object sender, EventArgs e)
         {
-            var a = sender as UserControlQuestion;
-            if (a.Questionnumber+1 == actualQuestion)
-            { 
-            UserAnswears[actualQuestion - 1] = a._isCorrect;
+            Console.WriteLine("-----------------------------------------------------------------------------");
 
-            NextQuestion(sender, e);
-            }
+            NextQuestion();
         }
 
-        public void NextQuestion(object sender, EventArgs e)
+        public void NextQuestion()
         {
             UserControl a;
-            if (actualQuestion > howManyQuestionInQuiz - 1)
+            if (actualQuestion >= howManyQuestionInQuiz - 1)
             {
-                InfoAboutActualQuestion.Content = "";
-
-                int goodAnswer = 0;
-                int badAnswer = 0;
-
-                foreach (var item in UserAnswears)
-                {
-                    if (item == true)
-                    {
-                        goodAnswer++;
-                    }else
-                    {
-                        badAnswer++;
-                    }
-                }
-                EventHandler handler = ChangeButtonNextquestionEvent;
-                 handler(this, e);
-
-
-                a = new EndQuizUserControl(goodAnswer, UserAnswears.Length);
+                a = new EndQuizUserControl(_questions[1]);
             }
             else
             {
-                InfoAboutActualQuestion.Content = ((actualQuestion +1).ToString() + "/" + howManyQuestionInQuiz.ToString());
-                a = new UserControlQuestion(_questions[actualQuestion], QuestionEnded, actualQuestion);
+                a = new UserControlQuestion(_questions[actualQuestion], new EventHandler(QuestionEndedEvent), actualQuestion);
                 actualQuestion++;
             }
+<<<<<<< HEAD
             if (actualQuestion > 1)
             {
                 var b = questionPlace.Children[0] as UserControlQuestion;
@@ -119,6 +103,8 @@ namespace PZ_generatory.Quiz
             }
            
 
+=======
+>>>>>>> parent of 4c588fb... Merge branch 'master' into Kamil
             questionPlace.Children.Clear();
             questionPlace.Children.Add(a);
         }
