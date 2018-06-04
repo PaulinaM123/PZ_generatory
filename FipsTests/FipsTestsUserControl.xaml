@@ -66,7 +66,6 @@
 
 
         </StackPanel>
-        <Button Name="InfoButton" FontSize="26" Margin="27,447,580,61" Height="Auto" Content="Dodatkowe informacje" Click="InfoButton_Click"/>
     </Grid>
 </UserControl>
 

@@ -286,9 +286,6 @@ namespace PZ_generatory
             return bytes;
         }
 
-        private void InfoButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+      
     }
 }
