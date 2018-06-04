@@ -89,6 +89,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminPanel\LoginToAdminPanel.xaml.cs">
+      <DependentUpon>LoginToAdminPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DBLinqClasses.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -170,7 +173,7 @@
     <Compile Include="Menu\UserControlAbout.xaml.cs">
       <DependentUpon>UserControlAbout.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Menu\UserControlAdminPanel.xaml.cs">
+    <Compile Include="AdminPanel\UserControlAdminPanel.xaml.cs">
       <DependentUpon>UserControlAdminPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Menu\UserControlAuthors.xaml.cs">
@@ -192,6 +195,10 @@
     <Compile Include="Menu\UserControlTesty.xaml.cs">
       <DependentUpon>UserControlTesty.xaml</DependentUpon>
     </Compile>
+    <Page Include="AdminPanel\LoginToAdminPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Encryptor\Decryptor.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -288,7 +295,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Menu\UserControlAdminPanel.xaml">
+    <Page Include="AdminPanel\UserControlAdminPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

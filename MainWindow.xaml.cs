@@ -1,4 +1,5 @@
-﻿using PZ_generatory.Menu;
+﻿using PZ_generatory.AdminPanel;
+using PZ_generatory.Menu;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -79,7 +80,8 @@ namespace PZ_generatory
 
         private void ButtonAdminPanel_Click(object sender, RoutedEventArgs e)
         {
-            ChangeMainUserControl(new UserControlAdminPanel());
+
+            ChangeMainUserControl(new LoginToAdminPanel());
         }
 
         private void ButtonAbout_Click(object sender, RoutedEventArgs e)
