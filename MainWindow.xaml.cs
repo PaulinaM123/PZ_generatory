@@ -1,4 +1,4 @@
-using PZ_generatory.AdminPanel;
+﻿using PZ_generatory.AdminPanel;
 using PZ_generatory.Menu;
 using System;
 using System.Collections.Generic;
@@ -66,7 +66,7 @@ namespace PZ_generatory
                     WrapMain.Children.Add(usc);
                     break;
                 case "ItemTesty":
-                    usc = new FipsTestsUserControl();
+                    usc = new UserControlTesty();
                     WrapMain.Children.Add(usc);
                     break;
                 case "ItemQuizTematyczny":
@@ -82,16 +82,6 @@ namespace PZ_generatory
         {
 
             ChangeMainUserControl(new LoginToAdminPanel());
-        }
-
-        private void ButtonAbout_Click(object sender, RoutedEventArgs e)
-        {
-            ChangeMainUserControl(new UserControlAbout());
-        }
-
-        private void ButtonAuthors_Click(object sender, RoutedEventArgs e)
-        {
-            ChangeMainUserControl(new UserControlAuthors());
         }
 
         private void ButtonAbout_Click(object sender, RoutedEventArgs e)

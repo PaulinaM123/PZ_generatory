@@ -29,7 +29,6 @@ namespace PZ_generatory.Quiz
             this.InfoAboutActualQuestion = infoAboutActualQuestion;
             this.UserAnswears = new bool[howManyQuestionInQuiz];
             this.ChangeButtonNextquestionEvent = ChangeButtonNextquestion;
-
         }
 
         public int HowManyQuestionInCategory()
@@ -44,7 +43,6 @@ namespace PZ_generatory.Quiz
 
         private void randXQuestionsFromAll(List<Question> allQuestionFromCategory)
         {
-
             if(allQuestionFromCategory.Count>= howManyQuestionInQuiz)
             { 
                 HashSet<int> numbers = new HashSet<int>();
@@ -120,6 +118,7 @@ namespace PZ_generatory.Quiz
                 
             }
            
+
             questionPlace.Children.Clear();
             questionPlace.Children.Add(a);
         }

@@ -121,7 +121,7 @@
 
                     </Button>
                 </Grid>
-                <ListView  x:Name="ListViewMenu" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                <ListView x:Name="ListViewMenu" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                           Foreground="White"  SelectionChanged="ListViewMenu_SelectionChanged">
                     <ListViewItem x:Name="ItemStronaGłówna" Height="60" IsSelected="True">
                         <StackPanel Orientation="Horizontal">

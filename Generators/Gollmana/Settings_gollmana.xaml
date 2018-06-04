@@ -17,11 +17,9 @@
                 <Label Content="Podaj liczbę rejsestór LFSR: " Foreground="#FF224BB6" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" Width="188"/>
                 <TextBox x:Name="lfsr_amount"  FontSize="18" HorizontalAlignment="Left" Height="25" Width="40" TextAlignment="Center" Margin="0,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
                 <Button x:Name="OK" Content="OK" HorizontalAlignment="Left" Margin="50,-25,0,0" VerticalAlignment="Top" Width="50" Height="25" Click="OK_Click" />
-                <Label Content="Ustaw wartości początkowe rejestrów: " Foreground="#FF224BB6" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="auto"/>   
-                    <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Visible">
-                            <StackPanel x:Name="Lfsr_list" MaxHeight="150" >
-                            </StackPanel>
-                    </ScrollViewer>
+                <Label Content="Ustaw wartości początkowe rejestrów: " Foreground="#FF224BB6" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="auto"/>
+                <StackPanel x:Name="Lfsr_list" ScrollViewer.VerticalScrollBarVisibility="Visible"  MaxHeight="150">
+                </StackPanel>
                 <Label Content="Podaj długość ciągu do wygenerowania: " Foreground="#FF224BB6" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="auto"/>
                 <TextBox x:Name="series_length"  FontSize="18" HorizontalAlignment="Left" Height="25" MinWidth="25" Width="auto" TextAlignment="Center" Margin="0,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
               
