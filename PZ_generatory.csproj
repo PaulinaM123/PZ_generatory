@@ -103,6 +103,10 @@
     <Compile Include="Encryptor\Encryptor.xaml.cs">
       <DependentUpon>Encryptor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FipsTests\FipsTestsUserControl.xaml.cs">
+      <DependentUpon>FipsTestsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FipsTests\FipsTests.cs" />
     <Compile Include="Generators\Geffego\GeffesGenerator.cs" />
     <Compile Include="Generators\Geffego\Settings_geffego.xaml.cs">
       <DependentUpon>Settings_geffego.xaml</DependentUpon>

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -12,7 +12,6 @@ namespace PZ_generatory.Quiz
         public int categoryId { get; set; }
 
         QuizManager quizmanager;
-       
 
         public StartQuiz(int categoryid, string categoryname)
         {

@@ -7,6 +7,7 @@ namespace PZ_generatory.Quiz
 {
     public partial class TimerControl : UserControl
     {
+
         EventHandler CallBack;
         public TimerControl(int time, EventHandler callBack)
         {

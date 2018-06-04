@@ -176,10 +176,7 @@ namespace PZ_generatory.Generators.Geffego
                 sw.Start();
                 var gen = generator.GenerateBitsAsChars(Convert.ToInt32(series_length.Text));
                 sw.Stop();
-                foreach (var item in gen)
-                {
-                    wynik.Text = wynik.Text + item;
-                }
+                wynik.Text = new string(gen);
                 sw.Reset();
             }
             else if (typ.SelectedIndex == 1)

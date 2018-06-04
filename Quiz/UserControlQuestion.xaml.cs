@@ -33,7 +33,9 @@ namespace PZ_generatory.Quiz
             this._isCorrect = false;
             this.Questionnumber = questionNumber;
             fillConententOnPage();
+
             this.NormalColor = ButtonAnswear_0.Background;
+
 
             startTimer();
         }
