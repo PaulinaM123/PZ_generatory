@@ -10,10 +10,23 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
-
-               <!--<ResourceDictionary Source="Themes/IgTheme/IG.MSControls.Core.Implicit.xaml" />
+                <!--<ResourceDictionary Source="Themes/IgTheme/IG.MSControls.Core.Implicit.xaml" />
                 <ResourceDictionary Source="Themes/IgTheme/IG.MSControls.Toolkit.Implicit.xaml" />-->
             </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="TextBox">
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="#FF224BB6" />
+                <Setter Property="Background" Value="White" />
+                <Setter Property="Foreground" Value="#FF224BB6" />
+            </Style>
+
+            <Style TargetType="ComboBox">
+                <Setter Property="Foreground" Value="#FF224BB6"/>
+            </Style>
+
+
         </ResourceDictionary>
+       
     </Application.Resources>
 </Application>

@@ -1,4 +1,4 @@
-﻿using PZ_generatory.Menu.QuizUserControls;
+﻿using PZ_generatory.Quiz;
 using System;
 using System.Collections.Generic;
 using System.Data.Linq;
@@ -39,7 +39,9 @@ namespace PZ_generatory
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            UserControl usc = new StartQuiz();
+            Button button = sender as Button;
+            var context = button.DataContext as Category;
+            UserControl usc = new StartQuiz(context.ID, context.CategoryName);
             GridMain.Children.Add(usc);
         }
     }

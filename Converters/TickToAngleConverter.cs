@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Data;
 
-namespace PZ_generatory
+namespace PZ_generatory.Converters
 {
     class TickToAngleConverter:IMultiValueConverter
     {

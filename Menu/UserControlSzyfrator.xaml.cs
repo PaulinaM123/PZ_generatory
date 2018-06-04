@@ -24,5 +24,19 @@ namespace PZ_generatory
         {
             InitializeComponent();
         }
+
+        private void Szyfrator_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl usc = new Encryptor();
+            UserChoice.Children.Add(usc);
+        }
+
+        private void Deszyfrator_Click(object sender, RoutedEventArgs e)
+        {
+            UserControl usc = new Decryptor();
+            UserChoice.Children.Add(usc);
+        }
+
+
     }
 }
